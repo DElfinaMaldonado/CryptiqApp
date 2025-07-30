@@ -83,3 +83,23 @@ slmx.sqlite
 *.db
 *.db-shm
 *.db-wal
+wsuo/
+CryptiqApplyV17/
+
+# Archivos específicos del proyecto
+000.testlog
+testlog.manifest
+shrx.sqlite
+shrx.sqlite-journal
+CryptiqApp/v17.1estStore/
+
+# Configuración de React Native
+node_modules/
+android/build/
+android/app/build/
+ios/build/
+.DS_Store
+.env
+*.log
+*.wsuo
+/.vs/slnx.sqlite
