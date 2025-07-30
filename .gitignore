@@ -73,3 +73,13 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Archivos generados por VS/VS Code y Copilot
+Copilotindices/
+CodeChunks.*
+SemanticSymbols.*
+FileContentIndex/
+slmx.sqlite
+*.db
+*.db-shm
+*.db-wal
