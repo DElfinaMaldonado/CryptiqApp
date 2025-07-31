@@ -18,7 +18,10 @@ class MainApplication : Application(), ReactApplication {
         }
 
         override fun getPackages(): List<ReactPackage> {
-            val packages = PackageList(this).packages
+            // Obtiene la lista automática de paquetes
+            val packages = PackageList(this).packages.toMutableList()
+            // Agrega manualmente FaceTecPackage para registrar el módulo nativo
+            packages.add(FaceTecPackage())
             return packages
         }
 
