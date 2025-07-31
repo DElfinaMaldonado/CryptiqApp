@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace "com.cryptiqapp" // 👈 NECESARIO PARA EVITAR ERROR DE NAMESPACE
     compileSdkVersion 33
 
     defaultConfig {
@@ -21,13 +22,13 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
         debug {
-            // configuraciones debug si tienes
+            // Configuraciones para debug si las necesitas
         }
     }
 }
 
-// Aquí agregas el repositorio local para los .aar en libs
 repositories {
+    // Para que gradle pueda encontrar tu .aar en android/app/libs
     flatDir {
         dirs 'libs'
     }
@@ -36,9 +37,11 @@ repositories {
 dependencies {
     implementation("com.facebook.react:react-android")
 
-    // Aquí agregas tu .aar, sin extensión y con el nombre exacto del archivo
+    // Asegúrate que este nombre coincide EXACTAMENTE con el archivo .aar (sin la extensión)
     implementation(name: 'facetec-sdk-9.7.78', ext: 'aar')
 
-    // Otras dependencias que tengas
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0" // o la versión que uses
+    // Dependencia de Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+
+    // Agrega aquí otras dependencias necesarias si las tienes
 }
