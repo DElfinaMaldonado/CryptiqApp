@@ -1,67 +1,44 @@
-apply plugin: "com.android.application"
-apply plugin: "org.jetbrains.kotlin.android"
-apply plugin: "com.facebook.react"
-
-react {
-    autolinkLibrariesWithApp()
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.facebook.react")
 }
 
-// Configuración de Proguard (activar si quieres minificación en release)
-def enableProguardInReleaseBuilds = false
-
-// Configuración JSC (si no usas Hermes)
-def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
-
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.cryptiqapp"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
 
-    signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
-    }
-
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-        }
         release {
-            signingConfig signingConfigs.debug
-            minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+        debug {
+            // configuraciones debug si tienes
         }
     }
-
-    namespace "com.cryptiqapp"
 }
 
+// Aquí agregas el repositorio local para los .aar en libs
 repositories {
     flatDir {
-        dirs 'libs' // Aquí deben estar tus .aar como el FaceTec SDK
+        dirs 'libs'
     }
 }
 
 dependencies {
     implementation("com.facebook.react:react-android")
 
-    // Añade el .aar local del FaceTec SDK aquí (sin extensión)
+    // Aquí agregas tu .aar, sin extensión y con el nombre exacto del archivo
     implementation(name: 'facetec-sdk-9.7.78', ext: 'aar')
 
-    if (hermesEnabled.toBoolean()) {
-        implementation("com.facebook.react:hermes-android")
-    } else {
-        implementation jscFlavor
-    }
+    // Otras dependencias que tengas
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0" // o la versión que uses
 }

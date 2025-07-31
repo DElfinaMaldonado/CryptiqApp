@@ -10,8 +10,7 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { extension ->
     extension.autolinkLibrariesFromCommand()
 }
 
-rootProject.name = 'CryptiqApp'
+rootProject.name = "CryptiqApp"
+include(":app")
 
-include ':app'
-
-includeBuild('../node_modules/@react-native/gradle-plugin')
+includeBuild("../node_modules/@react-native/gradle-plugin")
