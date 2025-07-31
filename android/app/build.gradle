@@ -6,18 +6,16 @@ react {
     autolinkLibrariesWithApp()
 }
 
-// Activa ProGuard en release si lo necesitas
+// Configuración de Proguard (activar si quieres minificación en release)
 def enableProguardInReleaseBuilds = false
 
-// Versión de JavaScriptCore (JSC) para React Native si no usas Hermes
+// Configuración JSC (si no usas Hermes)
 def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
 android {
-    ndkVersion rootProject.ext.ndkVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-    compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.cryptiqapp"
     defaultConfig {
         applicationId "com.cryptiqapp"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -42,22 +40,23 @@ android {
         release {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    namespace "com.cryptiqapp"
 }
 
 repositories {
-    // Permite usar librerías locales en /libs
     flatDir {
-        dirs 'libs' // Aquí debe estar el .aar de FaceTec
+        dirs 'libs' // Aquí deben estar tus .aar como el FaceTec SDK
     }
 }
 
 dependencies {
     implementation("com.facebook.react:react-android")
 
-    // Archivo AAR de FaceTec SDK en android/app/libs
+    // Añade el .aar local del FaceTec SDK aquí (sin extensión)
     implementation(name: 'facetec-sdk-9.7.78', ext: 'aar')
 
     if (hermesEnabled.toBoolean()) {

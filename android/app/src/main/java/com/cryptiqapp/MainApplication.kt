@@ -18,10 +18,8 @@ class MainApplication : Application(), ReactApplication {
         }
 
         override fun getPackages(): List<ReactPackage> {
-            // Obtiene la lista automática de paquetes
             val packages = PackageList(this).packages.toMutableList()
-            // Agrega manualmente FaceTecPackage para registrar el módulo nativo
-            packages.add(FaceTecPackage())
+            packages.add(FaceTecPackage())  // Agregamos el paquete de FaceTec
             return packages
         }
 
@@ -36,14 +34,10 @@ class MainApplication : Application(), ReactApplication {
         super.onCreate()
         SoLoader.init(this, false)
 
-        val deviceKeyIdentifier = "dxaDWEbcd8XnDYY7lxpCIv2ScJefs8sO"
+        val deviceKeyIdentifier = "TU_DEVICE_KEY"
         val publicFaceScanEncryptionKey = """
             -----BEGIN PUBLIC KEY-----
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn+klFctV8lqT3qQ8I3Jo
-            Ce1x5KHZ8BHa3r+Z0FzXv/ZKfZIMC9+MKjxZH5cI95fUpjDQkSG+aQy8R2u+NiF7
-            eE8MREbHRcoD5uZnRRFYZ0JkFzGDfZkKlfb9SypPp44yEdE8nPKdDxEbXuhq6UVc
-            F1W1vHeqZoB7x0gxk9Y+v2n2E3d7cQsOVljfYDbtHc2CDxz0L+C7KRn4i8fI9cE8
-            fzCl+5l5Df8HX/UxXLHRfQIDAQAB
+            TU_LLAVE_PUBLICA
             -----END PUBLIC KEY-----
         """.trimIndent()
 
