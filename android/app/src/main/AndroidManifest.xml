@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Permisos necesarios -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,6 +14,7 @@
         android:theme="@style/AppTheme"
         android:supportsRtl="true">
 
+        <!-- Actividad principal de React Native -->
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -21,6 +23,7 @@
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
 
+            <!-- Meta-dato para FaceTec SDK con el deviceKeyIdentifier -->
             <meta-data
                 android:name="com.facetec.sdk.app_token"
                 android:value="dxaDWEbcd8XnDYY7lxpCIv2ScJefs8sO" />
@@ -31,7 +34,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Actividad FaceTec -->
+        <!-- Declaración explícita de la actividad FaceTec -->
         <activity android:name="com.facetec.sdk.FaceTecActivity" />
+
     </application>
 </manifest>

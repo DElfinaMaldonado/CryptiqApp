@@ -1,48 +1,36 @@
 package com.cryptiqapp
 
-import android.app.Activity
-import android.content.Intent
-import com.facebook.react.bridge.*
-import com.facebook.react.bridge.ActivityEventListener
+import android.util.Log
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
+import com.facebook.react.bridge.ReactMethod
+import com.facetec.sdk.FaceTecSessionActivity
+import com.facetec.sdk.FaceTecSessionResult
+import com.facetec.sdk.FaceTecSessionResultCallback
 
-class FaceTecModule(reactContext: ReactApplicationContext) :
-    ReactContextBaseJavaModule(reactContext), ActivityEventListener {
+class FaceTecModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
-    private var mPromise: Promise? = null
-    private val FACETEC_REQUEST_CODE = 1001
-
-    init {
-        reactContext.addActivityEventListener(this)
-    }
+    private val TAG = "FaceTecModule"
 
     override fun getName(): String = "FaceTecModule"
 
     @ReactMethod
-    fun startFaceTecScan(promise: Promise) {
-        val activity = currentActivity
-        if (activity == null) {
-            promise.reject("NO_ACTIVITY", "Activity doesn't exist")
+    fun startFaceTecSession() {
+        val activity = currentActivity ?: run {
+            Log.e(TAG, "No hay actividad actual disponible.")
             return
         }
 
-        mPromise = promise
-        val intent = Intent()
-        intent.setClassName(activity.packageName, "com.facetec.sdk.FaceTecActivity")
-        activity.startActivityForResult(intent, FACETEC_REQUEST_CODE)
-    }
-
-    override fun onActivityResult(activity: Activity, requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == FACETEC_REQUEST_CODE && mPromise != null) {
-            if (resultCode == Activity.RESULT_OK) {
-                mPromise?.resolve("FaceTec scan completed.")
-            } else {
-                mPromise?.reject("SCAN_FAILED", "FaceTec scan failed.")
+        val sessionCallback = object : FaceTecSessionResultCallback {
+            override fun onFaceTecSessionResult(result: FaceTecSessionResult) {
+                if (result.isSessionCompletedSuccessfully) {
+                    Log.d(TAG, "¡Sesión FaceTec completada exitosamente!")
+                } else {
+                    Log.d(TAG, "Sesión FaceTec fallida o cancelada.")
+                }
             }
-            mPromise = null
         }
-    }
 
-    override fun onNewIntent(intent: Intent) {
-        // Obligatorio, pero no usado
+        FaceTecSessionActivity.createAndLaunchSession(sessionCallback, activity)
     }
 }

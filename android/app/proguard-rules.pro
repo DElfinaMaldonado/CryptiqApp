@@ -1,10 +1,25 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in /usr/local/Cellar/android-sdk/24.3.3/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# ProGuard rules for FaceTec SDK integration
 
-# Add any project specific keep options here:
+# Mantener todas las clases y métodos del SDK de FaceTec
+-keep class com.facetec.sdk.** { *; }
+
+# Evita advertencias relacionadas con FaceTec
+-dontwarn com.facetec.sdk.**
+
+# (Opcional) Mantener clases de tu propio paquete si usas reflexión o llamadas nativas
+-keep class com.cryptiqapp.** { *; }
+
+# Mantener clases usadas por React Native
+-keep class com.facebook.react.bridge.** { *; }
+-keep class com.facebook.react.modules.core.** { *; }
+-keep class com.facebook.react.uimanager.** { *; }
+-keepclassmembers class * extends com.facebook.react.bridge.JavaScriptModule {
+  <methods>;
+}
+-keepclassmembers class * extends com.facebook.react.bridge.NativeModule {
+  <methods>;
+}
+-keepclassmembers class * extends com.facebook.react.bridge.ReactContextBaseJavaModule {
+  <methods>;
+}
+-dontwarn com.facebook.react.**
