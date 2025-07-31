@@ -5,15 +5,16 @@ plugins {
 }
 
 android {
-    namespace "com.cryptiqapp" // 👈 NECESARIO PARA EVITAR ERROR DE NAMESPACE
-    compileSdkVersion 33
+    namespace "com.cryptiqapp"
+    compileSdkVersion 36
 
     defaultConfig {
         applicationId "com.cryptiqapp"
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdkVersion 24
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -22,26 +23,30 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
         debug {
-            // Configuraciones para debug si las necesitas
+            // Configuraciones para debug si es necesario
+        }
+    }
+
+    packagingOptions {
+        resources {
+            excludes += [
+                "META-INF/LICENSE",
+                "META-INF/LICENSE-FIREBASE.txt",
+                "META-INF/NOTICE"
+            ]
         }
     }
 }
 
 repositories {
-    // Para que gradle pueda encontrar tu .aar en android/app/libs
     flatDir {
         dirs 'libs'
     }
 }
 
 dependencies {
-    implementation("com.facebook.react:react-android")
-
-    // Asegúrate que este nombre coincide EXACTAMENTE con el archivo .aar (sin la extensión)
     implementation(name: 'facetec-sdk-9.7.78', ext: 'aar')
-
-    // Dependencia de Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
-
-    // Agrega aquí otras dependencias necesarias si las tienes
+    implementation "com.facebook.react:react-android"
+    implementation 'androidx.multidex:multidex:2.0.1'
 }

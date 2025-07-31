@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:ordering="sequentially"
+    android:shareInterpolator="false">
+    <!-- Initial delay-->
+    <objectAnimator
+        android:propertyName="translateY"
+        android:duration="1000"
+        android:valueFrom="8"
+        android:valueTo="8" />
+    <!-- Step 1: Down -->
+    <objectAnimator
+        android:propertyName="translateY"
+        android:duration="300"
+        android:valueFrom="8"
+        android:valueTo="16" />
+    <!-- Step 2: Up -->
+    <objectAnimator
+        android:propertyName="translateY"
+        android:duration="300"
+        android:valueFrom="16"
+        android:valueTo="8" />
+    <!-- End delay-->
+    <objectAnimator
+        android:propertyName="translateY"
+        android:duration="1000"
+        android:valueFrom="8"
+        android:valueTo="8" />
+</set>

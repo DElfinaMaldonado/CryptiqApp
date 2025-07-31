@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parentLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cameraLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cameraContainer"/>
+
+            <com.facetec.sdk.bk
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/focusAnimationView"/>
+
+            <RelativeLayout
+                android:id="@+id/cameraTransitionView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:alpha="0"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/parentInterfaceLayout"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/shutterEffectContainer"
+                android:visibility="invisible"
+                android:background="@color/facetec_full_black"/>
+
+            <ImageView
+                android:id="@+id/reviewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="1">
+                <view class="com.facetec.sdk.bn"
+                    android:id="@+id/idCaptureFrameView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/croppedFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:id="@+id/focusMessageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.facetec.sdk.ax
+                    android:id="@+id/tapToFocusMessageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#66000000"
+                    android:textSize="10sp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/focusMessageContainer">
+                <ImageView
+                    android:id="@+id/mainBrandingImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/instructionsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facetec.sdk.ax
+                    android:id="@+id/reviewInstructionsText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:background="@drawable/facetec_idscan_review_instructions_background"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:visibility="invisible"/>
+
+                <com.facetec.sdk.ax
+                    android:id="@+id/captureInstructionsText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/facetec_idscan_capture_instructions_background"
+                    android:textColor="@android:color/white"/>
+            </RelativeLayout>
+
+            <!-- Action buttons -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/interfaceButtonLayout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true">
+
+                <com.facetec.sdk.a
+                    android:text="Take Photo"
+                    android:id="@+id/takePictureButton"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="20sp"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    android:textColor="@drawable/facetec_button_text_state"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/facetec_button_background"
+                    android:textAllCaps="false"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:duplicateParentState="false" />
+
+                <LinearLayout
+                    android:id="@+id/reviewButtonsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.facetec.sdk.a
+                        android:id="@+id/retakePictureButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAllCaps="false"
+                        android:background="@drawable/facetec_button_background"
+                        android:text="Retake"
+                        android:textColor="@drawable/facetec_button_text_state"
+                        android:textSize="20sp"
+                        android:includeFontPadding="false"
+                        android:textAlignment="center"/>
+
+                    <View
+                        android:id="@+id/reviewButtonSeparator"
+                        android:layout_width="20dp"
+                        android:layout_height="0dp"/>
+
+                    <com.facetec.sdk.a
+                        android:id="@+id/acceptPictureButton"
+                        android:textAllCaps="false"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/facetec_button_background"
+                        android:text="Accept"
+                        android:textColor="@drawable/facetec_button_text_state"
+                        android:textSize="20sp"
+                        android:includeFontPadding="false"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/flashButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/FaceTec_accessibility_torch_button"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/idTypeLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/idTypeLayoutBackground"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/idTypeLayoutContent">
+
+                <LinearLayout
+                    android:id="@+id/selectionMainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_above="@id/selectionButtonLayout"
+                    android:alpha="0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <LinearLayout
+                        android:id="@+id/selectionDocumentImageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/selectionDocumentImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/facetec_document"
+                            tools:ignore="ContentDescription"/>
+
+                    </LinearLayout>
+
+                    <com.facetec.sdk.ax
+                        android:id="@+id/selectionHeader"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+                <!-- Selection Screen action buttons -->
+                <LinearLayout
+                    android:id="@+id/selectionButtonLayout"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:alpha="0">
+
+                    <com.facetec.sdk.a
+                        android:id="@+id/continueButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/facetec_button_background"
+                        android:duplicateParentState="false"
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/facetec_button_text_state"
+                        android:textSize="20sp"
+                        android:includeFontPadding="false"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cancelButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/FaceTec_accessibility_cancel_button"
+            android:focusable="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:layout_alignParentStart="true"
+            android:adjustViewBounds="true"
+            android:alpha="0"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/securingCameraFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:alpha="0"/>
+
+    <RelativeLayout
+        android:id="@+id/mainTransitionView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:visibility="gone"/>
+
+</RelativeLayout>

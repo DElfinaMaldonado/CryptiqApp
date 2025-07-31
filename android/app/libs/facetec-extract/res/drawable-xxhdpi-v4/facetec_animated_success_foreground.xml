@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="NewApi"
+    android:drawable="@drawable/facetec_success_foreground_vector_drawable">
+    <target
+        android:name="tick"
+        android:animation="@anim/facetec_check_animation">
+    </target>
+</animated-vector>

@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:importantForAccessibility="no"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="noHideDescendants"
+        android:alpha="1">
+        <view class="com.facetec.sdk.az"
+            android:id="@+id/zoomDialogBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </view>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/zoomDialogForeground"
+        android:importantForAccessibility="no"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:id="@+id/guidanceTransitionView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:alpha="0"/>
+
+            <!-- Back button (down here so it renders on top always) -->
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/FaceTec_accessibility_cancel_button"
+                android:gravity="center"
+                android:importantForAccessibility="yes"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"/>
+
+        </RelativeLayout>
+
+        <!-- Action button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottomLayout"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:importantForAccessibility="no"
+            android:layout_centerHorizontal="true">
+
+            <com.facetec.sdk.a
+                android:text=""
+                android:id="@+id/zoomDialogActionButton"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:includeFontPadding="false"
+                android:importantForAccessibility="yes"
+                android:textAlignment="center"
+                android:textColor="@drawable/facetec_button_text_state"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/facetec_button_background"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:duplicateParentState="false" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomLayout"
+            android:importantForAccessibility="no"
+            android:clipChildren="false">
+
+            <FrameLayout
+                android:id="@+id/centerContentFrameLayout"
+                android:importantForAccessibility="no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/centerContentView"
+                android:importantForAccessibility="no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:clipChildren="false"
+                android:gravity="center"
+                android:weightSum="10">
+
+                <RelativeLayout
+                    android:importantForAccessibility="noHideDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2.25">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/iconImageView"
+                        android:layout_centerInParent="true"
+                        tools:ignore="ContentDescription"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"/>
+                </RelativeLayout>
+                <com.facetec.sdk.ax
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zoomDialogIconSubtext"
+                    android:importantForAccessibility="no"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+
+                <com.facetec.sdk.ax
+                    android:id="@+id/zoomDialogHeader"
+                    android:importantForAccessibility="no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <com.facetec.sdk.ax
+                    android:id="@+id/messageView1"
+                    android:importantForAccessibility="no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:text=""/>
+
+                <com.facetec.sdk.ax
+                    android:visibility="gone"
+                    android:importantForAccessibility="no"
+                    android:id="@+id/messageView2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:text=""/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:importantForAccessibility="noHideDescendants"
+            android:layout_above="@id/bottomLayout">
+
+            <com.facetec.sdk.ax
+                android:id="@+id/zoomDialogText4"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text=""
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.1"
+                android:alpha="0.5"/>
+
+            <com.facetec.sdk.ax
+                android:id="@+id/zoomDialogText3"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#ffffff"
+                android:layout_above="@id/zoomDialogText4"
+                android:layout_centerInParent="true"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"
+                android:lineSpacingMultiplier="1.1"
+                android:gravity="center" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

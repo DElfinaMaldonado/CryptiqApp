@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facetec.sdk.dk xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--Spacer - programmatically set-->
+        <TextView
+            android:id="@+id/cancelButtonSpacer"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:text="" />
+
+        <!--Spacer-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/headerAndSubheaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="14">
+
+            <com.facetec.sdk.ax
+                android:id="@+id/headerTextView"
+                android:text="Let's try that again"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="8"
+                android:textSize="26sp"
+                android:maxLines="1"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textAlignment="center"/>
+
+            <com.facetec.sdk.ax
+                android:id="@+id/messageTextView"
+                android:text="But first, please take a look at your images and correct your environment."
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="6"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <!--Spacer-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/sideBySideLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="69"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/yourZoomLayout"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/yourZoomImageContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/yourZoomImage"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/yourZoomImageBorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        tools:ignore="ContentDescription" />
+                </FrameLayout>
+
+                <com.facetec.sdk.ax
+                    android:id="@+id/yourZoomSubimageTextView"
+                    android:text="Your Selfie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/idealZoomLayout"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/idealZoomImageContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp">
+
+                    <view
+                        class="com.facetec.sdk.di"
+                        android:id="@+id/idealImageSlideshowView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/idealZoomImage"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/idealOval"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/facetec_oval_ideal"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/idealZoomImageBorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        tools:ignore="ContentDescription" />
+                </FrameLayout>
+
+                <com.facetec.sdk.ax
+                    android:id="@+id/idealZoomSubimageTextView"
+                    android:text="Ideal Pose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Spacer-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="" />
+
+        <com.facetec.sdk.ax
+            android:id="@+id/instructionMessage1TextView"
+            android:text="Neutral Expression, No Smiling"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="6"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textAlignment="center"/>
+
+        <com.facetec.sdk.ax
+            android:id="@+id/instructionMessage2TextView"
+            android:text="No Glare or Extreme Lighting"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="6"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textAlignment="center"/>
+
+        <!--Spacer-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="" />
+
+    </LinearLayout>
+</com.facetec.sdk.dk>

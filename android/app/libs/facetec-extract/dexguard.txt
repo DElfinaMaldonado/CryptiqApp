@@ -1,0 +1,9 @@
+
+
+
+-stripnativelibrarysections !jni/arm64-v8a/libed78.so,!jni/armeabi-v7a/libed78.so,!lib/arm64-v8a/libed78.so,!lib/armeabi-v7a/libed78.so,dummyfile
+-encryptassetfiles !assets/com/facetec/sdk/a5b5981bf398ec36b-,!assets/com/facetec/sdk/8ece9efb0c7e6bd9a-,dummyfile
+
+
+-keepresourcefiles assets/com/facetec/sdk/8ece9efb0c7e6bd9a-,assets/com/facetec/sdk/a5b5981bf398ec36b-,jni/arm64-v8a/libed78.so,jni/armeabi-v7a/libed78.so,jni/*/libPhoenixAndroid.so,jni/*/libed78.so,lib/arm64-v8a/libed78.so,lib/armeabi-v7a/libed78.so,lib/*/libPhoenixAndroid.so,lib/*/libed78.so
+

@@ -7,8 +7,8 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facetec.sdk.FaceTecSDK
-import com.facetec.sdk.FaceTecSessionResult
 import com.facetec.sdk.FaceTecSessionResultCallback
+import com.facetec.sdk.FaceTecSessionResult
 
 class FaceTecModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 

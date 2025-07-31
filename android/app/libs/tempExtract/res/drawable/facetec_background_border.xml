@@ -1,0 +1,18 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- This is an "outer border" that can be defined.  not useful for new z7 stuff but could be exposed in the future -->
+    <stroke android:width="0dp" android:color="@color/facetec_alert_green"/>
+
+    <!-- new z7 customization for border radius -->
+    <corners android:bottomLeftRadius="2dp"
+        android:topLeftRadius="2dp"
+        android:bottomRightRadius="2dp"
+        android:topRightRadius="2dp" />
+
+    <!-- new z7 customization for the color of the border -->
+    <gradient
+        android:startColor="@color/facetec_full_black"
+        android:endColor="@color/facetec_full_black"
+        android:angle="90"/>
+</shape>

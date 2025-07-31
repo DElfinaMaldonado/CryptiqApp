@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Animation inspired by SpinKit's DoubleBounce sprite-->
+<animated-vector xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:ignore="NewApi">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:viewportWidth="24"
+            android:viewportHeight="24"
+            android:width="24dp"
+            android:height="24dp">
+
+            <group
+                android:name="backCircleGroup"
+                android:pivotX="12"
+                android:pivotY="12"
+                android:scaleX="0"
+                android:scaleY="0">
+
+                <path
+                    android:name="backCirclePath"
+                    android:pathData="M 12, 12
+                        m 0, -5
+                        a 5,-5 0 1,0 0,11
+                        a 5,-5 0 1,0 0,-11"
+                    android:strokeColor="#fff"
+                    android:strokeWidth="11"
+                    android:strokeAlpha="1"/>
+            </group>
+
+            <group
+                android:name="frontCircleGroup"
+                android:pivotX="12"
+                android:pivotY="12"
+                android:scaleX="1"
+                android:scaleY="1">
+
+                <path
+                    android:name="frontCirclePath"
+                    android:pathData="M 12, 12
+                        m 0, -5
+                        a 5,-5 0 1,0 0,11
+                        a 5,-5 0 1,0 0,-11"
+                    android:strokeColor="#fff"
+                    android:strokeWidth="11"
+                    android:strokeAlpha="0.5"/>
+            </group>
+        </vector>
+    </aapt:attr>
+
+<!--Animations-->
+
+    <target android:name="backCircleGroup">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueType="floatType"
+                    android:valueFrom="0f"
+                    android:valueTo="1f"
+                    android:duration="1000"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="backCircleGroup">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueType="floatType"
+                    android:valueFrom="0f"
+                    android:valueTo="1f"
+                    android:duration="1000"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="backCirclePath">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="strokeAlpha"
+                    android:valueType="floatType"
+                    android:valueFrom="1f"
+                    android:valueTo="0.5f"
+                    android:duration="1000"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="frontCircleGroup">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:valueType="floatType"
+                    android:valueFrom="1f"
+                    android:valueTo="0f"
+                    android:duration="1000"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="frontCircleGroup">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:valueType="floatType"
+                    android:valueFrom="1f"
+                    android:valueTo="0f"
+                    android:duration="1000"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="frontCirclePath">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="strokeAlpha"
+                    android:valueType="floatType"
+                    android:valueFrom="0.5f"
+                    android:valueTo="1f"
+                    android:duration="1000"
+                    android:repeatMode="reverse"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

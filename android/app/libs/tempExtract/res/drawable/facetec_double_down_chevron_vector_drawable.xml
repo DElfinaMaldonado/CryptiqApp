@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="InvalidVectorPath"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportHeight="32.0"
+    android:viewportWidth="32.0">
+
+    <group android:name="doubleDownChevron"
+        android:translateX="16"
+        android:translateY="8">
+        <path
+            android:name="downChevron1"
+            android:pathData="m1.47 8.03 6 6c.293.293.767.293 1.06 0l6-6c.293-.292.293-.768 0-1.06-.292-.293-.768-.293-1.06 0l-5.47 5.469s-5.47-5.469-5.47-5.469c-.292-.293-.768-.293-1.06 0-.293.292-.293.768 0 1.06z"
+            android:strokeColor="#fff"
+            android:fillColor="#fff"
+            android:strokeLineJoin="round"
+            android:strokeMiterLimit="2"/>
+        <path
+            android:name="downChevron2"
+            android:pathData="m1.47 3.03 6 6c.293.293.767.293 1.06 0l6-6c.293-.292.293-.768 0-1.06-.292-.293-.768-.293-1.06 0l-5.47 5.469s-5.47-5.469-5.47-5.469c-.292-.293-.768-.293-1.06 0-.293.292-.293.768 0 1.06z"
+            android:strokeColor="#fff"
+            android:fillColor="#fff"
+            android:strokeLineJoin="round"
+            android:strokeMiterLimit="2"/>
+    </group>
+</vector>

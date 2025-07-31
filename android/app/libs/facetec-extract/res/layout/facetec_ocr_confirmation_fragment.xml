@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OCRConfirmationFragment">
+
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </View>
+
+    <ScrollView
+        android:id="@+id/mainContentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="70dp"
+        android:fadeScrollbars="false"
+        android:scrollbarTrackVertical="@drawable/facetec_scrollbar_vertical_track"
+        android:scrollbarThumbVertical="@drawable/facetec_scrollbar_vertical_thumb"
+        android:orientation="vertical"
+        android:alpha="0">
+
+        <LinearLayout
+            android:id="@+id/scrollableContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mainHeaderContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mainHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#417FB2"
+                    android:text="Review &amp; Confirm Info"/>
+                <View
+                    android:id="@+id/mainHeaderDividerLineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#417FB2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dynamicContentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <com.facetec.sdk.a
+                android:id="@+id/confirmButton"
+                android:text="Confirm Info"
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@drawable/facetec_button_text_state"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/facetec_button_background"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:duplicateParentState="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/outsetActionButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/scrollDownIndicatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/facetec_scroll_down_indicator"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/scrollDownIndicatorContentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/scrollDownIndicatorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/scrollDownIndicatorImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

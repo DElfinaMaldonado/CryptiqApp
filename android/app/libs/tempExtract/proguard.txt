@@ -1,0 +1,2580 @@
+
+
+
+-keeppackagenames com.facetec.sdk
+-adaptresourcefilecontents !jni/arm64-v8a/libed78.so,!jni/armeabi-v7a/libed78.so,!lib/arm64-v8a/libed78.so,!lib/armeabi-v7a/libed78.so,dummyfile
+-dontwarn com.facetec.sdk.**,proguard.annotation.**
+
+
+
+
+# Keep all code in the FaceTec SDK
+-keep,includedescriptorclasses,includecode class com.facetec.sdk.** {
+    <fields>;    <methods>;
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.c {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.b {
+    void c();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.b$e {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.i {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.i {
+    void a();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.j {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.o {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.o {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.k {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.s {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.s {
+    void a();
+    void c();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.s$1 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.s$2 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.s$4 {
+    void e(long,long);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.s$4 {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.t {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.r {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.p {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.p {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.v {
+    int d();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.v {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.v$e {
+    void d();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.y {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.u {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ad$a {
+    void e();
+    void init$0();
+}
+
+-keep class com.facetec.sdk.ad$d {
+    void b(long,long);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ad$d {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.z {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.aa {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ah {
+    void d();
+    void c();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.af {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ag {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ag$3 {
+    java.lang.Object[] e(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ag$3 {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ag$d {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ag$d$e {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ae$e {
+    void a(long,long);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ae$e {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ae$e {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.ak {
+    int a();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.aj {
+    void m();
+    void init$0();
+}
+
+-keep class com.facetec.sdk.am {
+    java.lang.Object[] b(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.am {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.an {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.an {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.al {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ap {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ap {
+    void e();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ap$1 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ap$e {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.as {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.aq {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.aq {
+    void b();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.av {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.at {
+    void b();
+    void init$0();
+}
+
+-keep class com.facetec.sdk.at$5 {
+    java.lang.Object[] a(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.at$5 {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.at$c {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.au {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.au {
+    void a();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.aw {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ba {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ba$1 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ay {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ay {
+    void c();
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bc {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bh {
+    <init>();
+}
+
+-keep class com.facetec.sdk.FaceTecFeedbackCustomization {
+    void d(long,long);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.FaceTecFeedbackCustomization {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.FaceTecFrameCustomization {
+    void c();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.FaceTecFrameCustomization {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.FaceTecIDScanResult$4 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.FaceTecSDK {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bg {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bf {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bf {
+    void e(android.content.Context,java.lang.String,java.lang.String,com.facetec.sdk.be,com.facetec.sdk.FaceTecSDK$InitializeCallback);
+    void b(android.content.Context,java.lang.String,java.lang.String,java.lang.String,com.facetec.sdk.FaceTecSDK$InitializeCallback);
+    void a(android.content.Context,com.facetec.sdk.FaceTecSDK$InitializeCallback);
+    void b(android.content.Context,java.lang.String,java.lang.String,com.facetec.sdk.FaceTecSDK$InitializeCallback);
+    void j(android.content.Context);
+    void e();
+    void j();
+    void h();
+    void m();
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.FaceTecSessionActivity {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bd {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bd {
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.FaceTecSessionResult$1 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bl {
+    <init>();
+}
+
+-keep class com.facetec.sdk.bj {
+    int c();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bj {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.GuidanceCenterContentFragment {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bm {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bm {
+    void c();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bi {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bp {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.br {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bq {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bq {
+    void init$0();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bq$2 {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bs {
+    <init>();
+}
+
+-keep class com.facetec.sdk.bv {
+    void e(android.content.Context,com.facetec.sdk.bv$e);
+    void l();
+    void m();
+    void n();
+    void a(android.content.Context);
+    void k();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bv {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bv {
+    void e();
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keepclassmembers class com.facetec.sdk.bv$3 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.bv$d {
+    void b(long,long);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bv$d {
+    boolean a(android.content.Context);
+    void c();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.JNI {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.JNI {
+    void c(long,java.lang.String,java.lang.String);
+    void a(java.lang.Class,java.lang.Class);
+    void e(long,java.lang.reflect.Method);
+    java.lang.String e(java.lang.reflect.Method);
+    java.lang.String e(java.lang.Class);
+    void c();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.bu {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.bu {
+    void b();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ca {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ca {
+    void e();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cg {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cf {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.cf {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cd {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.cl {
+    java.lang.Runnable D();
+    boolean a(android.content.Context,boolean);
+    boolean b(android.content.Context,java.lang.String);
+    void a(android.content.Context,boolean,java.lang.String);
+    void f();
+    void g();
+    void o();
+    void q();
+    void t();
+    void r();
+    void p();
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cj {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.cj {
+    boolean H();
+    java.lang.String G();
+    boolean a();
+    int E();
+    void d();
+    boolean c(android.content.Context);
+    void c();
+    void b();
+    void i();
+    void F();
+    void a(android.content.Context);
+    void e(android.content.Context);
+    void b(java.io.File);
+    void e(android.content.res.AssetManager,java.lang.String,java.lang.String);
+    com.facetec.sdk.co g();
+    com.facetec.sdk.cp f();
+    com.facetec.sdk.cr j();
+    com.facetec.sdk.cn m();
+    com.facetec.sdk.cm l();
+    com.facetec.sdk.da k();
+    com.facetec.sdk.ck s();
+    com.facetec.sdk.ci q();
+    com.facetec.sdk.ch x();
+    boolean e(int);
+    void c(java.lang.String,java.lang.String);
+    byte[][] a(android.content.Context,boolean);
+    byte[][] b(android.content.Context,boolean);
+    void b(android.content.Context);
+    void A();
+    void D();
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cv {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.cv {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cu {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cw {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cy {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.cx$4 {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.cz {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.db {
+    <init>();
+}
+
+-keepclassmembers class com.facetec.sdk.dc {
+    com.facetec.sdk.dc d(java.lang.Runnable);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.dj {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.dg {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.dg {
+    void bo();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.dh {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.dl {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.dr {
+    <init>();
+}
+
+-keep class com.facetec.sdk.dz {
+    void b(android.content.Context,long,long);
+    java.lang.Object[] b(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.dz {
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ee {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ee$5 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ee$e {
+    void e(long,long);
+    java.lang.Object[] e(int,int);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ee$e {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ee$e {
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keep class com.facetec.sdk.eb {
+    int d();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.eb {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ef {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.eh {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ej {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.eo {
+    <init>();
+}
+
+-keep class com.facetec.sdk.el {
+    void d(android.content.Context,long,long);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.el {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.ek {
+    java.lang.Object[] b(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ek {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.et$5 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.et$2 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.et$3 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.et$4 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ep {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fa {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$3 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$5 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.fb$4 {
+    void a(long,long);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$4 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fb$4 {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$1 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$6 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$10 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$7 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$8 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fb$9 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.fb$17 {
+    int c();
+}
+
+-keep class com.facetec.sdk.fb$20 {
+    void c();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fb$20 {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fd {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fg {
+    void e();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ff {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fh {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fh$2 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fh$a {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.fh$b$4 {
+    int c();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fk {
+    <init>();
+}
+
+-keep class com.facetec.sdk.fl {
+    int a();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fl$a$3 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fj {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fj$5 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fo$3 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fr {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fr$1 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fv {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fv$4 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fx {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fx$1 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ft {
+    void c(long,long);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ft {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.fu$1 {
+    java.lang.Object[] c(android.content.Context,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.fu$1 {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.gc {
+    java.lang.Object[] e(android.content.Context,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.gc {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.fz {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$1 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ga$3 {
+    int d();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$3 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$2 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$5 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$4 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$9 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$10 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$7 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ga$7 {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$6 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$8 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$15 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$13 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ga$11 {
+    void c(android.content.Context,long,long);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$11 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ga$11 {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$12 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$14 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$17 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$19 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$20 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$18 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$16 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$22 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$21 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$23 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$27 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$26 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$31 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$35 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$32 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ga$34 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ge {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.gd$2 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.gg$2 {
+    java.lang.Object[] d(int,int);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.gg$2 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.gg$2 {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.gh$3 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.gl {
+    void c(long,long);
+    java.lang.Object[] d(android.content.Context,int,int);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.gl {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.gl {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.gk {
+    void y();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.gk$1 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.gt {
+    int d;    int b;    int c;    int a;    long[] e;    long[] j;    short i;    byte[] g;    int f;    int h;    int o;    <init>(java.io.InputStream,int,int,short,int,int);
+    <init>(java.io.InputStream,int,int,short,int,int,byte);
+    int read();
+    int read(byte[],int,int);
+    long skip(long);
+    int available();
+    boolean markSupported();
+    void e();
+    int d();
+    void c();
+}
+
+-keep class com.facetec.sdk.gy {
+    byte[] a;    int[] e;    int[] c;    int[] b;    int[] d;    int h;    int[] i;    byte[][] j;    int[] f;    byte[] g;    byte[] l;    int o;    int k;    int n;    int m;    int p;    int r;    <init>(java.io.InputStream,int,byte[],byte[][]);
+    <init>(java.io.InputStream,int,byte[],byte[][],byte);
+    int read();
+    int read(byte[]);
+    int read(byte[],int,int);
+    long skip(long);
+    int available();
+    void close();
+    boolean markSupported();
+    void mark(int);
+    void reset();
+    int e();
+    void b(byte[],byte[]);
+    void a();
+    void <clinit>();
+}
+
+-keep class com.facetec.sdk.gx {
+    int c;    <init>();
+}
+
+-keep class com.facetec.sdk.hg {
+    int b;    int a;    int e;}
+
+-keep class com.facetec.sdk.hf {
+    int c;    int d;    int a;}
+
+-keep class com.facetec.sdk.hc {
+    int d;}
+
+-keep class com.facetec.sdk.he {
+    int b;    int d;}
+
+-keep class com.facetec.sdk.hh {
+    int e;    char d;}
+
+-keep class com.facetec.sdk.hi {
+    int b;    int c;}
+
+-keep class com.facetec.sdk.hl {
+    int c;    char b;    char e;    int a;    int d;    int i;    int f;}
+
+-keep class com.facetec.sdk.hk {
+    int d;    int e;}
+
+-keep class com.facetec.sdk.hj {
+    int e;}
+
+-keep class com.facetec.sdk.hm {
+    int b;    int e;    char d;    char c;}
+
+-keep class com.facetec.sdk.io {
+    int d();
+}
+
+-keep class com.facetec.sdk.ip {
+    int b();
+}
+
+-keep class com.facetec.sdk.in {
+    int b();
+}
+
+-keep class com.facetec.sdk.il {
+    int e();
+}
+
+-keep class com.facetec.sdk.im {
+    int b();
+}
+
+-keep class com.facetec.sdk.iq {
+    int a();
+}
+
+-keep class com.facetec.sdk.iv {
+    int b();
+}
+
+-keep class com.facetec.sdk.ix {
+    int b();
+}
+
+-keep class com.facetec.sdk.iy {
+    int a();
+}
+
+-keep class com.facetec.sdk.ja {
+    int b();
+}
+
+-keep class com.facetec.sdk.jd {
+    int a();
+}
+
+-keep class com.facetec.sdk.je {
+    int a();
+}
+
+-keep class com.facetec.sdk.jb {
+    int d();
+}
+
+-keep class com.facetec.sdk.jc {
+    int b();
+}
+
+-keep class com.facetec.sdk.ji {
+    int a();
+}
+
+-keep class com.facetec.sdk.jg {
+    int e();
+}
+
+-keep class com.facetec.sdk.jh {
+    int e();
+}
+
+-keep class com.facetec.sdk.jj {
+    int b();
+}
+
+-keep class com.facetec.sdk.jf {
+    int b();
+}
+
+-keep class com.facetec.sdk.jm {
+    int b();
+}
+
+-keep class com.facetec.sdk.jo {
+    int e();
+}
+
+-keep class com.facetec.sdk.jl {
+    int c();
+}
+
+-keep class com.facetec.sdk.jn {
+    int e();
+}
+
+-keep class com.facetec.sdk.jk {
+    int b();
+}
+
+-keep class com.facetec.sdk.jt {
+    int d();
+}
+
+-keep class com.facetec.sdk.jp {
+    int a();
+}
+
+-keep class com.facetec.sdk.jr {
+    int c();
+}
+
+-keep class com.facetec.sdk.js {
+    int e();
+}
+
+-keep class com.facetec.sdk.jq {
+    int d();
+}
+
+-keep class com.facetec.sdk.jy {
+    int c();
+}
+
+-keep class com.facetec.sdk.jx {
+    int a();
+}
+
+-keep class com.facetec.sdk.ju {
+    int b();
+}
+
+-keep class com.facetec.sdk.jw {
+    int e();
+}
+
+-keep class com.facetec.sdk.jz {
+    int d();
+}
+
+-keep class com.facetec.sdk.kc {
+    int c();
+}
+
+-keep class com.facetec.sdk.ka {
+    int a();
+}
+
+-keep class com.facetec.sdk.kd {
+    int e();
+}
+
+-keep class com.facetec.sdk.kb {
+    int a();
+}
+
+-keep class com.facetec.sdk.ki {
+    int c();
+}
+
+-keep class com.facetec.sdk.ke {
+    int a();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.oo$3 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ol$c {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ot$e {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.oq$2 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.os {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.os$3 {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.or$a {
+    int d();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.op {
+    void a();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ov$5 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ou {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.oy$1 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ox {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ox$1 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ox$4 {
+    int e();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ow$b {
+    <init>();
+}
+
+-keep class com.facetec.sdk.pb {
+    int c();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pd$c {
+    <init>();
+}
+
+-keep class com.facetec.sdk.pa$b {
+    int b();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pa$b {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ph$b {
+    <init>();
+}
+
+-keep class com.facetec.sdk.ph$d {
+    java.lang.Object[] d(int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ph$d {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pg {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pg$2 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.pg$e {
+    void b();
+    java.lang.Object[] d(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pg$e {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.pg$e {
+    void init$0();
+    void init$1();
+    void init$2();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pf$d {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pn {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pm$e {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pl {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pq {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.pr {
+    void e();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.pr$5 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.pr$1 {
+    java.lang.Object[] c(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.pr$1 {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ps {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.ps$4 {
+    java.lang.Object[] a(int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ps$4 {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.pu$b {
+    java.lang.Object[] c(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.pu$b {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.pv {
+    int b();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qc {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.qb {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qf {
+    void h();
+    void init$0();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qd {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.qh$2 {
+    java.lang.Object[] a(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.qh$2 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qh$2 {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.qi {
+    java.lang.Object[] b(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qi {
+    void init$0();
+    void init$1();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.qr {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qt$b {
+    void init$0();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qt$c {
+    void init$0();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qx$3 {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.qx$4 {
+    int e();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.qx$e {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.qx$e$2 {
+    <init>();
+}
+
+-keep class com.facetec.sdk.qx$c$5 {
+    java.lang.Object[] b(int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.qx$c$5 {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.qx$c$1 {
+    int c();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.ra$c {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.qz$d {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.re$5 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rd {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rf$4 {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rq {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.rq {
+    void j();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rp {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ro {
+    <init>();
+}
+
+-keep class com.facetec.sdk.rm {
+    java.lang.Object[] d(android.content.Context,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.rm {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.ru {
+    <init>();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rv {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.rv {
+    void j();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rv$a {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.rr {
+    void b();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.rx {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.rx {
+    void r();
+    void init$0();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.rw {
+    void f();
+    void init$0();
+}
+
+-keep class com.facetec.sdk.sc {
+    java.lang.Object[] e(android.content.Context,int,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.sc {
+    void init$0();
+    void init$1();
+}
+
+-keep class com.facetec.sdk.sb {
+    int b();
+}
+
+-keep class com.facetec.sdk.sg {
+    java.lang.Object[] c(android.content.Context,int,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.sg {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.sk {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.sk {
+    void init$0();
+}
+
+-keep class com.facetec.sdk.si {
+    int a();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.sh {
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.sn {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class com.facetec.sdk.sn {
+    void i();
+    void init$0();
+}
+
+-keepclassmembers,allowoptimization,allowobfuscation class com.facetec.sdk.sn$3 {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.annotation.RequiresApi {
+    int value();
+    int api();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.appcompat.widget.AppCompatButton {
+    android.content.res.ColorStateList getSupportBackgroundTintList();
+    android.graphics.PorterDuff$Mode getSupportBackgroundTintMode();
+    void drawableStateChanged();
+    void onInitializeAccessibilityEvent(android.view.accessibility.AccessibilityEvent);
+    void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo);
+    void onLayout(boolean,int,int,int,int);
+    void onTextChanged(java.lang.CharSequence,int,int,int);
+    int getAutoSizeTextType();
+    int getAutoSizeStepGranularity();
+    int getAutoSizeMinTextSize();
+    int getAutoSizeMaxTextSize();
+    int[] getAutoSizeTextAvailableSizes();
+    android.view.ActionMode$Callback getCustomSelectionActionModeCallback();
+    android.content.res.ColorStateList getSupportCompoundDrawablesTintList();
+    android.graphics.PorterDuff$Mode getSupportCompoundDrawablesTintMode();
+    boolean isEmojiCompatEnabled();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.appcompat.widget.EmojiCompatConfigurationView {
+    void setEmojiCompatEnabled(boolean);
+    boolean isEmojiCompatEnabled();
+}
+
+-keepclassmembers,allowobfuscation class androidx.core.app.ActivityCompat {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.app.ActivityCompat {
+    void setPermissionCompatDelegate(androidx.core.app.ActivityCompat$PermissionCompatDelegate);
+    androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate();
+    boolean invalidateOptionsMenu(android.app.Activity);
+    void startActivityForResult(android.app.Activity,android.content.Intent,int,android.os.Bundle);
+    void startIntentSenderForResult(android.app.Activity,android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle);
+    void finishAffinity(android.app.Activity);
+    void finishAfterTransition(android.app.Activity);
+    android.net.Uri getReferrer(android.app.Activity);
+    android.view.View requireViewById(android.app.Activity,int);
+    void setEnterSharedElementCallback(android.app.Activity,androidx.core.app.SharedElementCallback);
+    void setExitSharedElementCallback(android.app.Activity,androidx.core.app.SharedElementCallback);
+    void postponeEnterTransition(android.app.Activity);
+    void startPostponedEnterTransition(android.app.Activity);
+    void requestPermissions(android.app.Activity,java.lang.String[],int);
+    boolean shouldShowRequestPermissionRationale(android.app.Activity,java.lang.String);
+    boolean isLaunchedFromBubble(android.app.Activity);
+    androidx.core.view.DragAndDropPermissionsCompat requestDragAndDropPermissions(android.app.Activity,android.view.DragEvent);
+    void recreate(android.app.Activity);
+    void setLocusContext(android.app.Activity,androidx.core.content.LocusIdCompat,android.os.Bundle);
+}
+
+-keep class androidx.core.app.ActivityCompat$PermissionCompatDelegate
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.app.ActivityCompat$OnRequestPermissionsResultCallback {
+    void onRequestPermissionsResult(int,java.lang.String[],int[]);
+}
+
+-keep class androidx.core.app.ActivityCompat$PermissionCompatDelegate
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.app.ActivityCompat$PermissionCompatDelegate {
+    boolean requestPermissions(android.app.Activity,java.lang.String[],int);
+    boolean onActivityResult(android.app.Activity,int,int,android.content.Intent);
+}
+
+-keep class androidx.core.app.SharedElementCallback
+
+-keepclassmembers,allowoptimization,allowobfuscation class androidx.core.app.SharedElementCallback {
+    <init>();
+}
+
+-keepclassmembers,allowobfuscation class androidx.core.content.ContextCompat {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.content.ContextCompat {
+    int RECEIVER_VISIBLE_TO_INSTANT_APPS;    int RECEIVER_EXPORTED;    int RECEIVER_NOT_EXPORTED;    java.lang.String getAttributionTag(android.content.Context);
+    boolean startActivities(android.content.Context,android.content.Intent[]);
+    boolean startActivities(android.content.Context,android.content.Intent[],android.os.Bundle);
+    void startActivity(android.content.Context,android.content.Intent,android.os.Bundle);
+    java.io.File getDataDir(android.content.Context);
+    java.io.File[] getObbDirs(android.content.Context);
+    java.io.File[] getExternalFilesDirs(android.content.Context,java.lang.String);
+    java.io.File[] getExternalCacheDirs(android.content.Context);
+    android.graphics.drawable.Drawable getDrawable(android.content.Context,int);
+    android.content.res.ColorStateList getColorStateList(android.content.Context,int);
+    int getColor(android.content.Context,int);
+    int checkSelfPermission(android.content.Context,java.lang.String);
+    java.io.File getNoBackupFilesDir(android.content.Context);
+    java.io.File getCodeCacheDir(android.content.Context);
+    android.content.Context createDeviceProtectedStorageContext(android.content.Context);
+    boolean isDeviceProtectedStorage(android.content.Context);
+    java.util.concurrent.Executor getMainExecutor(android.content.Context);
+    void startForegroundService(android.content.Context,android.content.Intent);
+    java.lang.Object getSystemService(android.content.Context,java.lang.Class);
+    android.content.Intent registerReceiver(android.content.Context,android.content.BroadcastReceiver,android.content.IntentFilter,int);
+    android.content.Intent registerReceiver(android.content.Context,android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler,int);
+    java.lang.String getSystemServiceName(android.content.Context,java.lang.Class);
+}
+
+-keep class androidx.core.content.LocusIdCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.content.LocusIdCompat {
+    <init>(java.lang.String);
+    java.lang.String getId();
+    int hashCode();
+    boolean equals(java.lang.Object);
+    java.lang.String toString();
+    android.content.LocusId toLocusId();
+    androidx.core.content.LocusIdCompat toLocusIdCompat(android.content.LocusId);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.graphics.Insets {
+    int left;    int top;    int right;    int bottom;}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.text.PrecomputedTextCompat {
+    androidx.core.text.PrecomputedTextCompat create(java.lang.CharSequence,androidx.core.text.PrecomputedTextCompat$Params);
+    android.text.PrecomputedText getPrecomputedText();
+    androidx.core.text.PrecomputedTextCompat$Params getParams();
+    int getParagraphCount();
+    int getParagraphStart(int);
+    int getParagraphEnd(int);
+    java.util.concurrent.Future getTextFuture(java.lang.CharSequence,androidx.core.text.PrecomputedTextCompat$Params,java.util.concurrent.Executor);
+    void setSpan(java.lang.Object,int,int,int);
+    void removeSpan(java.lang.Object);
+    java.lang.Object[] getSpans(int,int,java.lang.Class);
+    int getSpanStart(java.lang.Object);
+    int getSpanEnd(java.lang.Object);
+    int getSpanFlags(java.lang.Object);
+    int nextSpanTransition(int,int,java.lang.Class);
+    int length();
+    char charAt(int);
+    java.lang.CharSequence subSequence(int,int);
+    java.lang.String toString();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.text.PrecomputedTextCompat$Params {
+    <init>(android.text.PrecomputedText$Params);
+    android.text.TextPaint getTextPaint();
+    android.text.TextDirectionHeuristic getTextDirection();
+    int getBreakStrategy();
+    int getHyphenationFrequency();
+    boolean equalsWithoutTextDirection(androidx.core.text.PrecomputedTextCompat$Params);
+    boolean equals(java.lang.Object);
+    int hashCode();
+    java.lang.String toString();
+}
+
+-keepclassmembers,allowobfuscation class androidx.core.view.AccessibilityDelegateCompat {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.AccessibilityDelegateCompat {
+    <init>(android.view.View$AccessibilityDelegate);
+    void sendAccessibilityEvent(android.view.View,int);
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent);
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent);
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent);
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent);
+    void onInitializeAccessibilityNodeInfo(android.view.View,androidx.core.view.accessibility.AccessibilityNodeInfoCompat);
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent);
+    androidx.core.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View);
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle);
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.ContentInfoCompat {
+    int SOURCE_APP;    int SOURCE_CLIPBOARD;    int SOURCE_INPUT_METHOD;    int SOURCE_DRAG_AND_DROP;    int SOURCE_AUTOFILL;    int SOURCE_PROCESS_TEXT;    int FLAG_CONVERT_TO_PLAIN_TEXT;    androidx.core.view.ContentInfoCompat toContentInfoCompat(android.view.ContentInfo);
+    android.view.ContentInfo toContentInfo();
+    java.lang.String toString();
+    android.content.ClipData getClip();
+    int getSource();
+    int getFlags();
+    android.net.Uri getLinkUri();
+    android.os.Bundle getExtras();
+    android.util.Pair partition(androidx.core.util.Predicate);
+    android.util.Pair partition(android.view.ContentInfo,java.util.function.Predicate);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.DisplayCutoutCompat {
+    <init>(android.graphics.Rect,java.util.List);
+    <init>(androidx.core.graphics.Insets,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,androidx.core.graphics.Insets);
+    int getSafeInsetTop();
+    int getSafeInsetBottom();
+    int getSafeInsetLeft();
+    int getSafeInsetRight();
+    java.util.List getBoundingRects();
+    androidx.core.graphics.Insets getWaterfallInsets();
+    boolean equals(java.lang.Object);
+    int hashCode();
+    java.lang.String toString();
+}
+
+-keep class androidx.core.view.DragAndDropPermissionsCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.DragAndDropPermissionsCompat {
+    androidx.core.view.DragAndDropPermissionsCompat request(android.app.Activity,android.view.DragEvent);
+    void release();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.PointerIconCompat {
+    int TYPE_NULL;    int TYPE_ARROW;    int TYPE_CONTEXT_MENU;    int TYPE_HAND;    int TYPE_HELP;    int TYPE_WAIT;    int TYPE_CELL;    int TYPE_CROSSHAIR;    int TYPE_TEXT;    int TYPE_VERTICAL_TEXT;    int TYPE_ALIAS;    int TYPE_COPY;    int TYPE_NO_DROP;    int TYPE_ALL_SCROLL;    int TYPE_HORIZONTAL_DOUBLE_ARROW;    int TYPE_VERTICAL_DOUBLE_ARROW;    int TYPE_TOP_RIGHT_DIAGONAL_DOUBLE_ARROW;    int TYPE_TOP_LEFT_DIAGONAL_DOUBLE_ARROW;    int TYPE_ZOOM_IN;    int TYPE_ZOOM_OUT;    int TYPE_GRAB;    int TYPE_GRABBING;    int TYPE_DEFAULT;    java.lang.Object getPointerIcon();
+    androidx.core.view.PointerIconCompat getSystemIcon(android.content.Context,int);
+    androidx.core.view.PointerIconCompat create(android.graphics.Bitmap,float,float);
+    androidx.core.view.PointerIconCompat load(android.content.res.Resources,int);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.ViewCompat {
+    int OVER_SCROLL_ALWAYS;    int OVER_SCROLL_IF_CONTENT_SCROLLS;    int OVER_SCROLL_NEVER;    int IMPORTANT_FOR_ACCESSIBILITY_AUTO;    int IMPORTANT_FOR_ACCESSIBILITY_YES;    int IMPORTANT_FOR_ACCESSIBILITY_NO;    int IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS;    int ACCESSIBILITY_LIVE_REGION_NONE;    int ACCESSIBILITY_LIVE_REGION_POLITE;    int ACCESSIBILITY_LIVE_REGION_ASSERTIVE;    int LAYER_TYPE_NONE;    int LAYER_TYPE_SOFTWARE;    int LAYER_TYPE_HARDWARE;    int LAYOUT_DIRECTION_LTR;    int LAYOUT_DIRECTION_RTL;    int LAYOUT_DIRECTION_INHERIT;    int LAYOUT_DIRECTION_LOCALE;    int MEASURED_SIZE_MASK;    int MEASURED_STATE_MASK;    int MEASURED_HEIGHT_STATE_SHIFT;    int MEASURED_STATE_TOO_SMALL;    int SCROLL_AXIS_NONE;    int SCROLL_AXIS_HORIZONTAL;    int SCROLL_AXIS_VERTICAL;    int TYPE_TOUCH;    int TYPE_NON_TOUCH;    int SCROLL_INDICATOR_TOP;    int SCROLL_INDICATOR_BOTTOM;    int SCROLL_INDICATOR_LEFT;    int SCROLL_INDICATOR_RIGHT;    int SCROLL_INDICATOR_START;    int SCROLL_INDICATOR_END;    void saveAttributeDataForStyleable(android.view.View,android.content.Context,int[],android.util.AttributeSet,android.content.res.TypedArray,int,int);
+    boolean canScrollHorizontally(android.view.View,int);
+    boolean canScrollVertically(android.view.View,int);
+    int getOverScrollMode(android.view.View);
+    void setOverScrollMode(android.view.View,int);
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent);
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent);
+    void onInitializeAccessibilityNodeInfo(android.view.View,androidx.core.view.accessibility.AccessibilityNodeInfoCompat);
+    void setAccessibilityDelegate(android.view.View,androidx.core.view.AccessibilityDelegateCompat);
+    void setAutofillHints(android.view.View,java.lang.String[]);
+    int getImportantForAutofill(android.view.View);
+    void setImportantForAutofill(android.view.View,int);
+    boolean isImportantForAutofill(android.view.View);
+    boolean hasAccessibilityDelegate(android.view.View);
+    androidx.core.view.AccessibilityDelegateCompat getAccessibilityDelegate(android.view.View);
+    boolean hasTransientState(android.view.View);
+    void setHasTransientState(android.view.View,boolean);
+    void postInvalidateOnAnimation(android.view.View);
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int);
+    void postOnAnimation(android.view.View,java.lang.Runnable);
+    void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long);
+    int getImportantForAccessibility(android.view.View);
+    void setImportantForAccessibility(android.view.View,int);
+    boolean isImportantForAccessibility(android.view.View);
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle);
+    int addAccessibilityAction(android.view.View,java.lang.CharSequence,androidx.core.view.accessibility.AccessibilityViewCommand);
+    void replaceAccessibilityAction(android.view.View,androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat,java.lang.CharSequence,androidx.core.view.accessibility.AccessibilityViewCommand);
+    void removeAccessibilityAction(android.view.View,int);
+    void setStateDescription(android.view.View,java.lang.CharSequence);
+    java.lang.CharSequence getStateDescription(android.view.View);
+    void enableAccessibleClickableSpanSupport(android.view.View);
+    androidx.core.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View);
+    float getAlpha(android.view.View);
+    void setLayerType(android.view.View,int,android.graphics.Paint);
+    int getLayerType(android.view.View);
+    int getLabelFor(android.view.View);
+    void setLabelFor(android.view.View,int);
+    void setLayerPaint(android.view.View,android.graphics.Paint);
+    int getLayoutDirection(android.view.View);
+    void setLayoutDirection(android.view.View,int);
+    android.view.ViewParent getParentForAccessibility(android.view.View);
+    android.view.View requireViewById(android.view.View,int);
+    boolean isOpaque(android.view.View);
+    int resolveSizeAndState(int,int,int);
+    int getMeasuredWidthAndState(android.view.View);
+    int getMeasuredHeightAndState(android.view.View);
+    int getMeasuredState(android.view.View);
+    int combineMeasuredStates(int,int);
+    int getAccessibilityLiveRegion(android.view.View);
+    void setAccessibilityLiveRegion(android.view.View,int);
+    int getPaddingStart(android.view.View);
+    int getPaddingEnd(android.view.View);
+    void setPaddingRelative(android.view.View,int,int,int,int);
+    void dispatchStartTemporaryDetach(android.view.View);
+    void dispatchFinishTemporaryDetach(android.view.View);
+    float getTranslationX(android.view.View);
+    float getTranslationY(android.view.View);
+    android.graphics.Matrix getMatrix(android.view.View);
+    int getMinimumWidth(android.view.View);
+    int getMinimumHeight(android.view.View);
+    androidx.core.view.ViewPropertyAnimatorCompat animate(android.view.View);
+    void setTranslationX(android.view.View,float);
+    void setTranslationY(android.view.View,float);
+    void setAlpha(android.view.View,float);
+    void setX(android.view.View,float);
+    void setY(android.view.View,float);
+    void setRotation(android.view.View,float);
+    void setRotationX(android.view.View,float);
+    void setRotationY(android.view.View,float);
+    void setScaleX(android.view.View,float);
+    void setScaleY(android.view.View,float);
+    float getPivotX(android.view.View);
+    void setPivotX(android.view.View,float);
+    float getPivotY(android.view.View);
+    void setPivotY(android.view.View,float);
+    float getRotation(android.view.View);
+    float getRotationX(android.view.View);
+    float getRotationY(android.view.View);
+    float getScaleX(android.view.View);
+    float getScaleY(android.view.View);
+    float getX(android.view.View);
+    float getY(android.view.View);
+    void setElevation(android.view.View,float);
+    float getElevation(android.view.View);
+    void setTranslationZ(android.view.View,float);
+    float getTranslationZ(android.view.View);
+    void setTransitionName(android.view.View,java.lang.String);
+    java.lang.String getTransitionName(android.view.View);
+    int getWindowSystemUiVisibility(android.view.View);
+    void requestApplyInsets(android.view.View);
+    void setChildrenDrawingOrderEnabled(android.view.ViewGroup,boolean);
+    boolean getFitsSystemWindows(android.view.View);
+    void setFitsSystemWindows(android.view.View,boolean);
+    void jumpDrawablesToCurrentState(android.view.View);
+    void setOnApplyWindowInsetsListener(android.view.View,androidx.core.view.OnApplyWindowInsetsListener);
+    androidx.core.view.WindowInsetsCompat onApplyWindowInsets(android.view.View,androidx.core.view.WindowInsetsCompat);
+    androidx.core.view.WindowInsetsCompat dispatchApplyWindowInsets(android.view.View,androidx.core.view.WindowInsetsCompat);
+    void setSystemGestureExclusionRects(android.view.View,java.util.List);
+    java.util.List getSystemGestureExclusionRects(android.view.View);
+    androidx.core.view.WindowInsetsCompat getRootWindowInsets(android.view.View);
+    androidx.core.view.WindowInsetsCompat computeSystemWindowInsets(android.view.View,androidx.core.view.WindowInsetsCompat,android.graphics.Rect);
+    androidx.core.view.WindowInsetsControllerCompat getWindowInsetsController(android.view.View);
+    void setWindowInsetsAnimationCallback(android.view.View,androidx.core.view.WindowInsetsAnimationCompat$Callback);
+    void setOnReceiveContentListener(android.view.View,java.lang.String[],androidx.core.view.OnReceiveContentListener);
+    java.lang.String[] getOnReceiveContentMimeTypes(android.view.View);
+    androidx.core.view.ContentInfoCompat performReceiveContent(android.view.View,androidx.core.view.ContentInfoCompat);
+    void setSaveFromParentEnabled(android.view.View,boolean);
+    void setActivated(android.view.View,boolean);
+    boolean hasOverlappingRendering(android.view.View);
+    boolean isPaddingRelative(android.view.View);
+    void setBackground(android.view.View,android.graphics.drawable.Drawable);
+    android.content.res.ColorStateList getBackgroundTintList(android.view.View);
+    void setBackgroundTintList(android.view.View,android.content.res.ColorStateList);
+    android.graphics.PorterDuff$Mode getBackgroundTintMode(android.view.View);
+    void setBackgroundTintMode(android.view.View,android.graphics.PorterDuff$Mode);
+    void setNestedScrollingEnabled(android.view.View,boolean);
+    boolean isNestedScrollingEnabled(android.view.View);
+    boolean startNestedScroll(android.view.View,int);
+    void stopNestedScroll(android.view.View);
+    boolean hasNestedScrollingParent(android.view.View);
+    boolean dispatchNestedScroll(android.view.View,int,int,int,int,int[]);
+    boolean dispatchNestedPreScroll(android.view.View,int,int,int[],int[]);
+    boolean startNestedScroll(android.view.View,int,int);
+    void stopNestedScroll(android.view.View,int);
+    boolean hasNestedScrollingParent(android.view.View,int);
+    void dispatchNestedScroll(android.view.View,int,int,int,int,int[],int,int[]);
+    boolean dispatchNestedScroll(android.view.View,int,int,int,int,int[],int);
+    boolean dispatchNestedPreScroll(android.view.View,int,int,int[],int[],int);
+    boolean dispatchNestedFling(android.view.View,float,float,boolean);
+    boolean dispatchNestedPreFling(android.view.View,float,float);
+    boolean isInLayout(android.view.View);
+    boolean isLaidOut(android.view.View);
+    boolean isLayoutDirectionResolved(android.view.View);
+    float getZ(android.view.View);
+    void setZ(android.view.View,float);
+    void offsetTopAndBottom(android.view.View,int);
+    void offsetLeftAndRight(android.view.View,int);
+    void setClipBounds(android.view.View,android.graphics.Rect);
+    android.graphics.Rect getClipBounds(android.view.View);
+    boolean isAttachedToWindow(android.view.View);
+    boolean hasOnClickListeners(android.view.View);
+    void setScrollIndicators(android.view.View,int);
+    void setScrollIndicators(android.view.View,int,int);
+    int getScrollIndicators(android.view.View);
+    void setPointerIcon(android.view.View,androidx.core.view.PointerIconCompat);
+    android.view.Display getDisplay(android.view.View);
+    void setTooltipText(android.view.View,java.lang.CharSequence);
+    boolean startDragAndDrop(android.view.View,android.content.ClipData,android.view.View$DragShadowBuilder,java.lang.Object,int);
+    void cancelDragAndDrop(android.view.View);
+    void updateDragShadow(android.view.View,android.view.View$DragShadowBuilder);
+    int getNextClusterForwardId(android.view.View);
+    void setNextClusterForwardId(android.view.View,int);
+    boolean isKeyboardNavigationCluster(android.view.View);
+    void setKeyboardNavigationCluster(android.view.View,boolean);
+    boolean isFocusedByDefault(android.view.View);
+    void setFocusedByDefault(android.view.View,boolean);
+    android.view.View keyboardNavigationClusterSearch(android.view.View,android.view.View,int);
+    void addKeyboardNavigationClusters(android.view.View,java.util.Collection,int);
+    boolean restoreDefaultFocus(android.view.View);
+    boolean hasExplicitFocusable(android.view.View);
+    int generateViewId();
+    void addOnUnhandledKeyEventListener(android.view.View,androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat);
+    void removeOnUnhandledKeyEventListener(android.view.View,androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat);
+    void setScreenReaderFocusable(android.view.View,boolean);
+    boolean isScreenReaderFocusable(android.view.View);
+    void setAccessibilityPaneTitle(android.view.View,java.lang.CharSequence);
+    java.lang.CharSequence getAccessibilityPaneTitle(android.view.View);
+    boolean isAccessibilityHeading(android.view.View);
+    void setAccessibilityHeading(android.view.View,boolean);
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat
+
+-keepclassmembers,allowobfuscation class androidx.core.view.ViewCompat {
+    <init>();
+}
+
+-keep class androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.ViewCompat$OnUnhandledKeyEventListenerCompat {
+    boolean onUnhandledKeyEvent(android.view.View,android.view.KeyEvent);
+}
+
+-keep class androidx.core.view.ViewPropertyAnimatorCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.ViewPropertyAnimatorCompat {
+    androidx.core.view.ViewPropertyAnimatorCompat setDuration(long);
+    androidx.core.view.ViewPropertyAnimatorCompat alpha(float);
+    androidx.core.view.ViewPropertyAnimatorCompat alphaBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat translationX(float);
+    androidx.core.view.ViewPropertyAnimatorCompat translationY(float);
+    androidx.core.view.ViewPropertyAnimatorCompat withEndAction(java.lang.Runnable);
+    long getDuration();
+    androidx.core.view.ViewPropertyAnimatorCompat setInterpolator(android.view.animation.Interpolator);
+    android.view.animation.Interpolator getInterpolator();
+    androidx.core.view.ViewPropertyAnimatorCompat setStartDelay(long);
+    long getStartDelay();
+    androidx.core.view.ViewPropertyAnimatorCompat rotation(float);
+    androidx.core.view.ViewPropertyAnimatorCompat rotationBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat rotationX(float);
+    androidx.core.view.ViewPropertyAnimatorCompat rotationXBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat rotationY(float);
+    androidx.core.view.ViewPropertyAnimatorCompat rotationYBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat scaleX(float);
+    androidx.core.view.ViewPropertyAnimatorCompat scaleXBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat scaleY(float);
+    androidx.core.view.ViewPropertyAnimatorCompat scaleYBy(float);
+    void cancel();
+    androidx.core.view.ViewPropertyAnimatorCompat x(float);
+    androidx.core.view.ViewPropertyAnimatorCompat xBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat y(float);
+    androidx.core.view.ViewPropertyAnimatorCompat yBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat translationXBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat translationYBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat translationZBy(float);
+    androidx.core.view.ViewPropertyAnimatorCompat translationZ(float);
+    androidx.core.view.ViewPropertyAnimatorCompat z(float);
+    androidx.core.view.ViewPropertyAnimatorCompat zBy(float);
+    void start();
+    androidx.core.view.ViewPropertyAnimatorCompat withLayer();
+    androidx.core.view.ViewPropertyAnimatorCompat withStartAction(java.lang.Runnable);
+    androidx.core.view.ViewPropertyAnimatorCompat setListener(androidx.core.view.ViewPropertyAnimatorListener);
+    androidx.core.view.ViewPropertyAnimatorCompat setUpdateListener(androidx.core.view.ViewPropertyAnimatorUpdateListener);
+}
+
+-keep class androidx.core.view.WindowInsetsAnimationCompat$Callback
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.WindowInsetsAnimationCompat$Callback {
+    int DISPATCH_MODE_STOP;    int DISPATCH_MODE_CONTINUE_ON_SUBTREE;    <init>(int);
+    int getDispatchMode();
+    void onPrepare(androidx.core.view.WindowInsetsAnimationCompat);
+    androidx.core.view.WindowInsetsAnimationCompat$BoundsCompat onStart(androidx.core.view.WindowInsetsAnimationCompat,androidx.core.view.WindowInsetsAnimationCompat$BoundsCompat);
+    androidx.core.view.WindowInsetsCompat onProgress(androidx.core.view.WindowInsetsCompat,java.util.List);
+    void onEnd(androidx.core.view.WindowInsetsAnimationCompat);
+}
+
+-keep class androidx.core.view.WindowInsetsCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.WindowInsetsCompat {
+    androidx.core.view.WindowInsetsCompat CONSUMED;    <init>(androidx.core.view.WindowInsetsCompat);
+    androidx.core.view.WindowInsetsCompat toWindowInsetsCompat(android.view.WindowInsets);
+    androidx.core.view.WindowInsetsCompat toWindowInsetsCompat(android.view.WindowInsets,android.view.View);
+    int getSystemWindowInsetLeft();
+    int getSystemWindowInsetTop();
+    int getSystemWindowInsetRight();
+    int getSystemWindowInsetBottom();
+    boolean hasSystemWindowInsets();
+    boolean hasInsets();
+    boolean isConsumed();
+    boolean isRound();
+    androidx.core.view.WindowInsetsCompat consumeSystemWindowInsets();
+    androidx.core.view.WindowInsetsCompat replaceSystemWindowInsets(int,int,int,int);
+    androidx.core.view.WindowInsetsCompat replaceSystemWindowInsets(android.graphics.Rect);
+    int getStableInsetTop();
+    int getStableInsetLeft();
+    int getStableInsetRight();
+    int getStableInsetBottom();
+    boolean hasStableInsets();
+    androidx.core.view.WindowInsetsCompat consumeStableInsets();
+    androidx.core.view.DisplayCutoutCompat getDisplayCutout();
+    androidx.core.view.WindowInsetsCompat consumeDisplayCutout();
+    androidx.core.graphics.Insets getSystemWindowInsets();
+    androidx.core.graphics.Insets getStableInsets();
+    androidx.core.graphics.Insets getMandatorySystemGestureInsets();
+    androidx.core.graphics.Insets getTappableElementInsets();
+    androidx.core.graphics.Insets getSystemGestureInsets();
+    androidx.core.view.WindowInsetsCompat inset(androidx.core.graphics.Insets);
+    androidx.core.view.WindowInsetsCompat inset(int,int,int,int);
+    androidx.core.graphics.Insets getInsets(int);
+    androidx.core.graphics.Insets getInsetsIgnoringVisibility(int);
+    boolean isVisible(int);
+    boolean equals(java.lang.Object);
+    int hashCode();
+    android.view.WindowInsets toWindowInsets();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.WindowInsetsCompat$Type {
+    int statusBars();
+    int navigationBars();
+    int captionBar();
+    int ime();
+    int systemGestures();
+    int mandatorySystemGestures();
+    int tappableElement();
+    int displayCutout();
+    int systemBars();
+}
+
+-keep class androidx.core.view.WindowInsetsControllerCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.WindowInsetsControllerCompat {
+    int BEHAVIOR_SHOW_BARS_BY_TOUCH;    int BEHAVIOR_SHOW_BARS_BY_SWIPE;    int BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE;    <init>(android.view.Window,android.view.View);
+    androidx.core.view.WindowInsetsControllerCompat toWindowInsetsControllerCompat(android.view.WindowInsetsController);
+    void show(int);
+    void hide(int);
+    boolean isAppearanceLightStatusBars();
+    void setAppearanceLightStatusBars(boolean);
+    boolean isAppearanceLightNavigationBars();
+    void setAppearanceLightNavigationBars(boolean);
+    void controlWindowInsetsAnimation(int,long,android.view.animation.Interpolator,android.os.CancellationSignal,androidx.core.view.WindowInsetsAnimationControlListenerCompat);
+    void setSystemBarsBehavior(int);
+    int getSystemBarsBehavior();
+    void addOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener);
+    void removeOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener);
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeInfoCompat {
+    int mParentVirtualDescendantId;    int ACTION_FOCUS;    int ACTION_CLEAR_FOCUS;    int ACTION_SELECT;    int ACTION_CLEAR_SELECTION;    int ACTION_CLICK;    int ACTION_LONG_CLICK;    int ACTION_ACCESSIBILITY_FOCUS;    int ACTION_CLEAR_ACCESSIBILITY_FOCUS;    int ACTION_NEXT_AT_MOVEMENT_GRANULARITY;    int ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY;    int ACTION_NEXT_HTML_ELEMENT;    int ACTION_PREVIOUS_HTML_ELEMENT;    int ACTION_SCROLL_FORWARD;    int ACTION_SCROLL_BACKWARD;    int ACTION_COPY;    int ACTION_PASTE;    int ACTION_CUT;    int ACTION_SET_SELECTION;    int ACTION_EXPAND;    int ACTION_COLLAPSE;    int ACTION_DISMISS;    int ACTION_SET_TEXT;    java.lang.String ACTION_ARGUMENT_MOVEMENT_GRANULARITY_INT;    java.lang.String ACTION_ARGUMENT_HTML_ELEMENT_STRING;    java.lang.String ACTION_ARGUMENT_EXTEND_SELECTION_BOOLEAN;    java.lang.String ACTION_ARGUMENT_SELECTION_START_INT;    java.lang.String ACTION_ARGUMENT_SELECTION_END_INT;    java.lang.String ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE;    java.lang.String ACTION_ARGUMENT_ROW_INT;    java.lang.String ACTION_ARGUMENT_COLUMN_INT;    java.lang.String ACTION_ARGUMENT_PROGRESS_VALUE;    java.lang.String ACTION_ARGUMENT_MOVE_WINDOW_X;    java.lang.String ACTION_ARGUMENT_MOVE_WINDOW_Y;    java.lang.String ACTION_ARGUMENT_PRESS_AND_HOLD_DURATION_MILLIS_INT;    int FOCUS_INPUT;    int FOCUS_ACCESSIBILITY;    int MOVEMENT_GRANULARITY_CHARACTER;    int MOVEMENT_GRANULARITY_WORD;    int MOVEMENT_GRANULARITY_LINE;    int MOVEMENT_GRANULARITY_PARAGRAPH;    int MOVEMENT_GRANULARITY_PAGE;    java.lang.String EXTRA_DATA_TEXT_CHARACTER_LOCATION_KEY;    java.lang.String EXTRA_DATA_TEXT_CHARACTER_LOCATION_ARG_START_INDEX;    java.lang.String EXTRA_DATA_TEXT_CHARACTER_LOCATION_ARG_LENGTH;    int EXTRA_DATA_TEXT_CHARACTER_LOCATION_ARG_MAX_LENGTH;    <init>(java.lang.Object);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat wrap(android.view.accessibility.AccessibilityNodeInfo);
+    android.view.accessibility.AccessibilityNodeInfo unwrap();
+    java.lang.Object getInfo();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat obtain(android.view.View);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat obtain(android.view.View,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat obtain();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat obtain(androidx.core.view.accessibility.AccessibilityNodeInfoCompat);
+    void setSource(android.view.View);
+    void setSource(android.view.View,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat findFocus(int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat focusSearch(int);
+    int getWindowId();
+    int getChildCount();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getChild(int);
+    void addChild(android.view.View);
+    void addChild(android.view.View,int);
+    boolean removeChild(android.view.View);
+    boolean removeChild(android.view.View,int);
+    int getActions();
+    void addAction(int);
+    void addAction(androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat);
+    boolean removeAction(androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat);
+    boolean performAction(int);
+    boolean performAction(int,android.os.Bundle);
+    void setMovementGranularities(int);
+    int getMovementGranularities();
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getParent();
+    void setParent(android.view.View);
+    void setParent(android.view.View,int);
+    void getBoundsInParent(android.graphics.Rect);
+    void setBoundsInParent(android.graphics.Rect);
+    void getBoundsInScreen(android.graphics.Rect);
+    void setBoundsInScreen(android.graphics.Rect);
+    boolean isCheckable();
+    void setCheckable(boolean);
+    boolean isChecked();
+    void setChecked(boolean);
+    boolean isFocusable();
+    void setFocusable(boolean);
+    boolean isFocused();
+    void setFocused(boolean);
+    boolean isVisibleToUser();
+    void setVisibleToUser(boolean);
+    boolean isAccessibilityFocused();
+    void setAccessibilityFocused(boolean);
+    boolean isSelected();
+    void setSelected(boolean);
+    boolean isClickable();
+    void setClickable(boolean);
+    boolean isLongClickable();
+    void setLongClickable(boolean);
+    boolean isEnabled();
+    void setEnabled(boolean);
+    boolean isPassword();
+    void setPassword(boolean);
+    boolean isScrollable();
+    void setScrollable(boolean);
+    boolean isTextSelectable();
+    void setTextSelectable(boolean);
+    boolean isImportantForAccessibility();
+    void setImportantForAccessibility(boolean);
+    java.lang.CharSequence getPackageName();
+    void setPackageName(java.lang.CharSequence);
+    java.lang.CharSequence getClassName();
+    void setClassName(java.lang.CharSequence);
+    java.lang.CharSequence getText();
+    void setText(java.lang.CharSequence);
+    void addSpansToExtras(java.lang.CharSequence,android.view.View);
+    android.text.style.ClickableSpan[] getClickableSpans(java.lang.CharSequence);
+    java.lang.CharSequence getContentDescription();
+    java.lang.CharSequence getStateDescription();
+    void setContentDescription(java.lang.CharSequence);
+    void setStateDescription(java.lang.CharSequence);
+    java.lang.String getUniqueId();
+    void setUniqueId(java.lang.String);
+    void recycle();
+    void setViewIdResourceName(java.lang.String);
+    java.lang.String getViewIdResourceName();
+    int getLiveRegion();
+    void setLiveRegion(int);
+    int getDrawingOrder();
+    void setDrawingOrder(int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat getCollectionInfo();
+    void setCollectionInfo(java.lang.Object);
+    void setCollectionItemInfo(java.lang.Object);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat getCollectionItemInfo();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$RangeInfoCompat getRangeInfo();
+    void setRangeInfo(androidx.core.view.accessibility.AccessibilityNodeInfoCompat$RangeInfoCompat);
+    android.view.accessibility.AccessibilityNodeInfo$ExtraRenderingInfo getExtraRenderingInfo();
+    java.util.List getActionList();
+    void setContentInvalid(boolean);
+    boolean isContentInvalid();
+    boolean isContextClickable();
+    void setContextClickable(boolean);
+    java.lang.CharSequence getHintText();
+    void setHintText(java.lang.CharSequence);
+    void setError(java.lang.CharSequence);
+    java.lang.CharSequence getError();
+    void setLabelFor(android.view.View);
+    void setLabelFor(android.view.View,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getLabelFor();
+    void setLabeledBy(android.view.View);
+    void setLabeledBy(android.view.View,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getLabeledBy();
+    boolean canOpenPopup();
+    void setCanOpenPopup(boolean);
+    java.util.List findAccessibilityNodeInfosByViewId(java.lang.String);
+    android.os.Bundle getExtras();
+    int getInputType();
+    void setInputType(int);
+    java.util.List getAvailableExtraData();
+    void setAvailableExtraData(java.util.List);
+    void setMaxTextLength(int);
+    int getMaxTextLength();
+    void setTextSelection(int,int);
+    int getTextSelectionStart();
+    int getTextSelectionEnd();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getTraversalBefore();
+    void setTraversalBefore(android.view.View);
+    void setTraversalBefore(android.view.View,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getTraversalAfter();
+    void setTraversalAfter(android.view.View);
+    void setTraversalAfter(android.view.View,int);
+    androidx.core.view.accessibility.AccessibilityWindowInfoCompat getWindow();
+    boolean isDismissable();
+    void setDismissable(boolean);
+    boolean isEditable();
+    void setEditable(boolean);
+    boolean isMultiLine();
+    void setMultiLine(boolean);
+    java.lang.CharSequence getTooltipText();
+    void setTooltipText(java.lang.CharSequence);
+    void setPaneTitle(java.lang.CharSequence);
+    java.lang.CharSequence getPaneTitle();
+    boolean isScreenReaderFocusable();
+    void setScreenReaderFocusable(boolean);
+    boolean isShowingHintText();
+    void setShowingHintText(boolean);
+    boolean isHeading();
+    void setHeading(boolean);
+    boolean isTextEntryKey();
+    void setTextEntryKey(boolean);
+    boolean refresh();
+    java.lang.CharSequence getRoleDescription();
+    void setRoleDescription(java.lang.CharSequence);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$TouchDelegateInfoCompat getTouchDelegateInfo();
+    void setTouchDelegateInfo(androidx.core.view.accessibility.AccessibilityNodeInfoCompat$TouchDelegateInfoCompat);
+    int hashCode();
+    boolean equals(java.lang.Object);
+    java.lang.String toString();
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat {
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_FOCUS;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_CLEAR_FOCUS;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SELECT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_CLEAR_SELECTION;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_CLICK;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_LONG_CLICK;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_ACCESSIBILITY_FOCUS;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_CLEAR_ACCESSIBILITY_FOCUS;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_NEXT_AT_MOVEMENT_GRANULARITY;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_NEXT_HTML_ELEMENT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PREVIOUS_HTML_ELEMENT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_FORWARD;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_BACKWARD;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_COPY;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PASTE;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_CUT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SET_SELECTION;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_EXPAND;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_COLLAPSE;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_DISMISS;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SET_TEXT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SHOW_ON_SCREEN;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_TO_POSITION;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_UP;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_LEFT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_DOWN;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SCROLL_RIGHT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PAGE_UP;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PAGE_DOWN;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PAGE_LEFT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PAGE_RIGHT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_CONTEXT_CLICK;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SET_PROGRESS;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_MOVE_WINDOW;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SHOW_TOOLTIP;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_HIDE_TOOLTIP;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_PRESS_AND_HOLD;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_IME_ENTER;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_DRAG_START;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_DRAG_DROP;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_DRAG_CANCEL;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SHOW_TEXT_SUGGESTIONS;    androidx.core.view.accessibility.AccessibilityViewCommand mCommand;    <init>(int,java.lang.CharSequence);
+    <init>(int,java.lang.CharSequence,androidx.core.view.accessibility.AccessibilityViewCommand);
+    int getId();
+    java.lang.CharSequence getLabel();
+    boolean perform(android.view.View,android.os.Bundle);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat createReplacementAction(java.lang.CharSequence,androidx.core.view.accessibility.AccessibilityViewCommand);
+    int hashCode();
+    boolean equals(java.lang.Object);
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat {
+    int SELECTION_MODE_NONE;    int SELECTION_MODE_SINGLE;    int SELECTION_MODE_MULTIPLE;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat obtain(int,int,boolean,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat obtain(int,int,boolean);
+    int getColumnCount();
+    int getRowCount();
+    boolean isHierarchical();
+    int getSelectionMode();
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat {
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat obtain(int,int,int,int,boolean,boolean);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$CollectionItemInfoCompat obtain(int,int,int,int,boolean);
+    int getColumnIndex();
+    int getColumnSpan();
+    int getRowIndex();
+    int getRowSpan();
+    boolean isHeading();
+    boolean isSelected();
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$RangeInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$RangeInfoCompat {
+    int RANGE_TYPE_INT;    int RANGE_TYPE_FLOAT;    int RANGE_TYPE_PERCENT;    androidx.core.view.accessibility.AccessibilityNodeInfoCompat$RangeInfoCompat obtain(int,float,float,float);
+    float getCurrent();
+    float getMax();
+    float getMin();
+    int getType();
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$TouchDelegateInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeInfoCompat$TouchDelegateInfoCompat {
+    <init>(java.util.Map);
+    int getRegionCount();
+    android.graphics.Region getRegionAt(int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getTargetForRegion(android.graphics.Region);
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityNodeProviderCompat
+
+-keepclassmembers,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeProviderCompat {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityNodeProviderCompat {
+    int HOST_VIEW_ID;    <init>(java.lang.Object);
+    java.lang.Object getProvider();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat createAccessibilityNodeInfo(int);
+    boolean performAction(int,int,android.os.Bundle);
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String,int);
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat findFocus(int);
+    void addExtraDataToAccessibilityNodeInfo(int,androidx.core.view.accessibility.AccessibilityNodeInfoCompat,java.lang.String,android.os.Bundle);
+}
+
+-keep class androidx.core.view.accessibility.AccessibilityViewCommand
+
+-keep class androidx.core.view.accessibility.AccessibilityWindowInfoCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.view.accessibility.AccessibilityWindowInfoCompat {
+    int TYPE_APPLICATION;    int TYPE_INPUT_METHOD;    int TYPE_SYSTEM;    int TYPE_ACCESSIBILITY_OVERLAY;    int TYPE_SPLIT_SCREEN_DIVIDER;    int getType();
+    int getLayer();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getRoot();
+    boolean isInPictureInPictureMode();
+    androidx.core.view.accessibility.AccessibilityWindowInfoCompat getParent();
+    int getId();
+    void getRegionInScreen(android.graphics.Region);
+    void getBoundsInScreen(android.graphics.Rect);
+    boolean isActive();
+    boolean isFocused();
+    boolean isAccessibilityFocused();
+    int getChildCount();
+    androidx.core.view.accessibility.AccessibilityWindowInfoCompat getChild(int);
+    int getDisplayId();
+    java.lang.CharSequence getTitle();
+    androidx.core.view.accessibility.AccessibilityNodeInfoCompat getAnchor();
+    androidx.core.view.accessibility.AccessibilityWindowInfoCompat obtain();
+    androidx.core.view.accessibility.AccessibilityWindowInfoCompat obtain(androidx.core.view.accessibility.AccessibilityWindowInfoCompat);
+    void recycle();
+    android.view.accessibility.AccessibilityWindowInfo unwrap();
+    int hashCode();
+    boolean equals(java.lang.Object);
+    java.lang.String toString();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.core.widget.TextViewCompat {
+    int AUTO_SIZE_TEXT_TYPE_NONE;    int AUTO_SIZE_TEXT_TYPE_UNIFORM;    void setCompoundDrawablesRelative(android.widget.TextView,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable);
+    void setCompoundDrawablesRelativeWithIntrinsicBounds(android.widget.TextView,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable);
+    void setCompoundDrawablesRelativeWithIntrinsicBounds(android.widget.TextView,int,int,int,int);
+    int getMaxLines(android.widget.TextView);
+    int getMinLines(android.widget.TextView);
+    void setTextAppearance(android.widget.TextView,int);
+    android.graphics.drawable.Drawable[] getCompoundDrawablesRelative(android.widget.TextView);
+    void setAutoSizeTextTypeWithDefaults(android.widget.TextView,int);
+    void setAutoSizeTextTypeUniformWithConfiguration(android.widget.TextView,int,int,int,int);
+    void setAutoSizeTextTypeUniformWithPresetSizes(android.widget.TextView,int[],int);
+    int getAutoSizeTextType(android.widget.TextView);
+    int getAutoSizeStepGranularity(android.widget.TextView);
+    int getAutoSizeMinTextSize(android.widget.TextView);
+    int getAutoSizeMaxTextSize(android.widget.TextView);
+    int[] getAutoSizeTextAvailableSizes(android.widget.TextView);
+    void setCustomSelectionActionModeCallback(android.widget.TextView,android.view.ActionMode$Callback);
+    android.view.ActionMode$Callback wrapCustomSelectionActionModeCallback(android.widget.TextView,android.view.ActionMode$Callback);
+    android.view.ActionMode$Callback unwrapCustomSelectionActionModeCallback(android.view.ActionMode$Callback);
+    void setFirstBaselineToTopHeight(android.widget.TextView,int);
+    void setLastBaselineToBottomHeight(android.widget.TextView,int);
+    int getFirstBaselineToTopHeight(android.widget.TextView);
+    int getLastBaselineToBottomHeight(android.widget.TextView);
+    void setLineHeight(android.widget.TextView,int);
+    androidx.core.text.PrecomputedTextCompat$Params getTextMetricsParams(android.widget.TextView);
+    void setTextMetricsParams(android.widget.TextView,androidx.core.text.PrecomputedTextCompat$Params);
+    void setPrecomputedText(android.widget.TextView,androidx.core.text.PrecomputedTextCompat);
+    void setCompoundDrawableTintList(android.widget.TextView,android.content.res.ColorStateList);
+    android.content.res.ColorStateList getCompoundDrawableTintList(android.widget.TextView);
+    void setCompoundDrawableTintMode(android.widget.TextView,android.graphics.PorterDuff$Mode);
+    android.graphics.PorterDuff$Mode getCompoundDrawableTintMode(android.widget.TextView);
+}
+
+-keep class androidx.core.text.PrecomputedTextCompat$Params
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.vectordrawable.graphics.drawable.Animatable2Compat {
+    void registerAnimationCallback(androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback);
+    boolean unregisterAnimationCallback(androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback);
+    void clearAnimationCallbacks();
+}
+
+-keep class androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback
+
+-keep class androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback
+
+-keepclassmembers,allowobfuscation class androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback {
+    <init>();
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback {
+    void onAnimationStart(android.graphics.drawable.Drawable);
+    void onAnimationEnd(android.graphics.drawable.Drawable);
+}
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat {
+    android.graphics.drawable.Drawable mutate();
+    androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat create(android.content.Context,int);
+    androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat createFromXmlInner(android.content.Context,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme);
+    android.graphics.drawable.Drawable$ConstantState getConstantState();
+    int getChangingConfigurations();
+    void draw(android.graphics.Canvas);
+    void onBoundsChange(android.graphics.Rect);
+    boolean onStateChange(int[]);
+    boolean onLevelChange(int);
+    int getAlpha();
+    void setAlpha(int);
+    void setColorFilter(android.graphics.ColorFilter);
+    android.graphics.ColorFilter getColorFilter();
+    void setTint(int);
+    void setTintList(android.content.res.ColorStateList);
+    void setTintMode(android.graphics.PorterDuff$Mode);
+    boolean setVisible(boolean,boolean);
+    boolean isStateful();
+    int getOpacity();
+    int getIntrinsicWidth();
+    int getIntrinsicHeight();
+    boolean isAutoMirrored();
+    void setAutoMirrored(boolean);
+    void inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme);
+    void inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet);
+    void applyTheme(android.content.res.Resources$Theme);
+    boolean canApplyTheme();
+    boolean isRunning();
+    void start();
+    void stop();
+    void registerAnimationCallback(androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback);
+    boolean unregisterAnimationCallback(androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback);
+    void clearAnimationCallbacks();
+    void registerAnimationCallback(android.graphics.drawable.Drawable,androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback);
+    boolean unregisterAnimationCallback(android.graphics.drawable.Drawable,androidx.vectordrawable.graphics.drawable.Animatable2Compat$AnimationCallback);
+    void clearAnimationCallbacks(android.graphics.drawable.Drawable);
+    boolean setState(int[]);
+    void setChangingConfigurations(int);
+    android.graphics.Region getTransparentRegion();
+    int[] getState();
+    boolean getPadding(android.graphics.Rect);
+    int getMinimumHeight();
+    int getMinimumWidth();
+    android.graphics.drawable.Drawable getCurrent();
+    void clearColorFilter();
+    void jumpToCurrentState();
+    void setFilterBitmap(boolean);
+    void setHotspotBounds(int,int,int,int);
+    void setHotspot(float,float);
+    void setColorFilter(int,android.graphics.PorterDuff$Mode);
+}
+
+-keep class androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
+
+-keepclassmembers,allowshrinking,allowobfuscation class androidx.vectordrawable.graphics.drawable.VectorDrawableCommon {
+    void setColorFilter(int,android.graphics.PorterDuff$Mode);
+    boolean onLevelChange(int);
+    void onBoundsChange(android.graphics.Rect);
+    void setHotspot(float,float);
+    void setHotspotBounds(int,int,int,int);
+    void setFilterBitmap(boolean);
+    void jumpToCurrentState();
+    void applyTheme(android.content.res.Resources$Theme);
+    void clearColorFilter();
+    android.graphics.drawable.Drawable getCurrent();
+    int getMinimumWidth();
+    int getMinimumHeight();
+    boolean getPadding(android.graphics.Rect);
+    int[] getState();
+    android.graphics.Region getTransparentRegion();
+    void setChangingConfigurations(int);
+    boolean setState(int[]);
+}
