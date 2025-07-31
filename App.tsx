@@ -1,11 +1,4 @@
 /* eslint-disable react-native/no-inline-styles */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React, {Component} from 'react';
 import {
   Alert,
@@ -16,196 +9,215 @@ import {
   StyleSheet,
   Text,
   View,
+  ActivityIndicator
 } from 'react-native';
 
-// Define your own color constants since Colors is not available
+import FaceTecConfig from './FaceTecConfig';
+import {FaceTecSDK} from './FaceTecSDKModule';
+import LivenessCheckProcessor from './processors/LivenessCheckProcessor';
+
 const Colors = {
   darker: '#121212',
   lighter: '#F3F3F3',
+  primary: '#417FB2',
+  error: '#FF3B30',
+  success: '#34C759'
 };
-import FaceTecConfig from './FaceTecConfig.js';
-import LivenessCheckProcessor from './processors/LivenessCheckProcessor'; 
-
-import {FaceTecSDK} from './FaceTecSDKModule';
-
-LivenessCheckProcessor;
 
 const isDarkMode = false;
-
 const backgroundStyle = {
   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
 };
 
 class App extends Component {
   state = {
-    showFaceTecInitializing: true,
-    isLivenessEnabled: false,
+    initializationStatus: 'loading',
+    initializationError: null,
+    isProcessing: false,
+    lastOperationResult: null
   };
 
-  constructor(props: Props) {
-    super(props);
+  componentDidMount() {
+    this.initializeFaceTecSDK();
+  }
 
-    if (!FaceTecConfig.deviceKeyIdentifier) {
-      throw new Error('FaceTecConfig.deviceKeyIdentifier not defined');
+  initializeFaceTecSDK = async () => {
+    if (!FaceTecConfig.deviceKeyIdentifier || !FaceTecConfig.publicFaceScanEncryptionKey) {
+      const errorMsg = 'Configuración faltante: Verifica deviceKeyIdentifier y encryptionKey';
+      console.error(errorMsg);
+      this.setState({
+        initializationStatus: 'error',
+        initializationError: errorMsg
+      });
+      Alert.alert('Error de Configuración', errorMsg);
+      return;
     }
 
-    FaceTecSDK.initialize(
-      FaceTecConfig.deviceKeyIdentifier,
-      FaceTecConfig.publicFaceScanEncryptionKey,
-      (success: boolean, errorStr: string) => {
-        if (success) {
-          this.setState({
-            isLivenessEnabled: true,
-            showFaceTecInitializing: false,
-          });
-        } else {
-          Alert.alert('Initialize Error', errorStr);
+    try {
+      await new Promise((resolve, reject) => {
+        FaceTecSDK.initialize(
+          FaceTecConfig.deviceKeyIdentifier,
+          FaceTecConfig.publicFaceScanEncryptionKey,
+          (success, errorStr) => {
+            if (success) {
+              console.log('FaceTec SDK inicializado correctamente');
+              resolve();
+            } else {
+              console.error('Error inicializando FaceTec SDK:', errorStr);
+              reject(new Error(errorStr || 'Error desconocido al inicializar SDK'));
+            }
+          }
+        );
+      });
+
+      this.setState({initializationStatus: 'success'});
+    } catch (error) {
+      this.setState({
+        initializationStatus: 'error',
+        initializationError: error.message
+      });
+      Alert.alert('Error de Inicialización', `No se pudo inicializar el SDK: ${error.message}`);
+    }
+  };
+
+  getSessionToken = async () => {
+    try {
+      const userAgent = await FaceTecSDK.getAPIUserAgentString();
+      const endpoint = `${FaceTecConfig.baseURL}/session-token`;
+
+      const response = await fetch(endpoint, {
+        method: 'GET',
+        headers: {
+          'X-Device-Key': FaceTecConfig.deviceKeyIdentifier,
+          'User-Agent': userAgent,
+          'X-User-Agent': userAgent,
+          'Content-Type': 'application/json'
         }
-      },
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (!data?.sessionToken) {
+        throw new Error('El servidor no devolvió un sessionToken válido');
+      }
+
+      return data.sessionToken;
+    } catch (error) {
+      console.error('Error en getSessionToken:', error);
+      throw new Error(`No se pudo obtener el token: ${error.message}`);
+    }
+  };
+
+  startLivenessDetection = async () => {
+    if (this.state.isProcessing) return;
+
+    this.setState({isProcessing: true, lastOperationResult: null});
+
+    try {
+      const sessionToken = await this.getSessionToken();
+      const processor = new LivenessCheckProcessor(sessionToken, (result) => {
+        this.setState({
+          lastOperationResult: result,
+          isProcessing: false
+        });
+
+        Alert.alert(
+          result.success ? 'Éxito' : 'Error en Verificación',
+          result.message
+        );
+      });
+
+      FaceTecSDK.startLiveness(sessionToken, processor);
+    } catch (error) {
+      this.setState({
+        lastOperationResult: {
+          success: false,
+          message: error.message
+        },
+        isProcessing: false
+      });
+
+      Alert.alert('Error en Verificación', error.message);
+    }
+  };
+
+  renderInitializationStatus() {
+    const {initializationStatus, initializationError} = this.state;
+
+    switch (initializationStatus) {
+      case 'loading':
+        return (
+          <View style={styles.statusContainer}>
+            <ActivityIndicator size="large" color={Colors.primary} />
+            <Text style={styles.statusText}>Inicializando FaceTec SDK...</Text>
+          </View>
+        );
+      case 'error':
+        return (
+          <View style={styles.statusContainer}>
+            <Text style={[styles.statusText, {color: Colors.error}]}>
+              Error: {initializationError}
+            </Text>
+            <Button
+              title="Reintentar"
+              onPress={this.initializeFaceTecSDK}
+              color={Colors.primary}
+            />
+          </View>
+        );
+      default:
+        return null;
+    }
+  }
+
+  renderOperationResult() {
+    const {lastOperationResult} = this.state;
+    if (!lastOperationResult) return null;
+
+    return (
+      <View style={[
+        styles.resultContainer,
+        {backgroundColor: lastOperationResult.success ? Colors.success : Colors.error}
+      ]}>
+        <Text style={styles.resultText}>{lastOperationResult.message}</Text>
+      </View>
     );
   }
 
-  // Request a session token from the FaceTec API.
-  // Session tokens are necessary to perform Liveness checks and other
-  // features.
-  // async getSessionToken() {
-  //   const userAgent = await FaceTecSDK.getAPIUserAgentString();
-  //   const xUserAgent = await FaceTecSDK.getAPIUserAgentString();
-
-  //   const endpoint = `${FaceTecConfig.baseURL}/session-token`;
-
-  //   return new Promise((resolve, reject) => {
-  //     try {
-  //       const xhr = new XMLHttpRequest();
-  //       xhr.open('GET', endpoint);
-  //       xhr.setRequestHeader('X-Device-Key', FaceTecConfig.deviceKeyIdentifier);
-  //       xhr.setRequestHeader('User-Agent', userAgent);
-  //       xhr.setRequestHeader('X-User-Agent', xUserAgent);
-  //       xhr.onreadystatechange = function () {
-  //         if (this.readyState === XMLHttpRequest.DONE) {
-  //           try {
-  //             const response = JSON.parse(xhr.responseText);
-  //             Something went wrong in parsing the response. Return an error.
-  //             if (
-  //               response.sessionToken &&
-  //               typeof response.sessionToken === 'string'
-  //             ) {
-  //               resolve(response.sessionToken);
-  //             }
-  //             else {
-  //               reject(new Error('Session token is not valid.'));
-  //             }
-  //           }
-  //           catch (error) {
-  //             xhr.abort();
-  //             console.error(
-  //               'Error parsing response JSON. Failed with error: ',
-  //               error,
-  //             );
-  //             reject(new Error('Error parsing response JSON'));
-  //           }
-  //         }
-  //       };
-  //       xhr.onerror = function () {
-  //         xhr.abort();
-  //         console.error(
-  //           'Encountered an error sending the network request, aborting request...',
-  //         );
-  //         reject(new Error('Network error occurred.'));
-  //       };
-
-  //       xhr.send();
-  //     }
-  //     catch (error) {
-  //       console.error('Error fetching session token: ', error);
-  //       reject(
-  //         new Error(
-  //           'Could not fetch session token. Check to make sure your device key is correct.',
-  //         ),
-  //       );
-  //     }
-  //   });
-  // };
-async getSessionToken(): Promise<string> {
-  const userAgent = await FaceTecSDK.getAPIUserAgentString();
-  const xUserAgent = await FaceTecSDK.getAPIUserAgentString();
-
-  const endpoint = `${FaceTecConfig.baseURL}/session-token`;
-
-  return new Promise((resolve, reject) => {
-    try {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', endpoint);
-      xhr.setRequestHeader('X-Device-Key', FaceTecConfig.deviceKeyIdentifier);
-      xhr.setRequestHeader('User-Agent', userAgent);
-      xhr.setRequestHeader('X-User-Agent', xUserAgent);
-      xhr.onreadystatechange = function () {
-        if (this.readyState === XMLHttpRequest.DONE) {
-          try {
-            const response = JSON.parse(xhr.responseText);
-            if (
-              response.sessionToken &&
-              typeof response.sessionToken === 'string'
-            ) {
-              resolve(response.sessionToken); 
-            } else {
-              reject(new Error('Session token is not valid.'));
-            }
-          } catch (error) {
-            xhr.abort();
-            reject(new Error('Error parsing response JSON'));
-          }
-        }
-      };
-      xhr.onerror = function () {
-        xhr.abort();
-        reject(new Error('Network error occurred.'));
-      };
-
-      xhr.send();
-    } catch (error) {
-      reject(new Error('Could not fetch session token.'));
-    }
-  });
-}
-
-async startLivenessDetection() {
-  const sessionToken = await this.getSessionToken();
-  if (!sessionToken) {
-    throw new Error('Session token is undefined.');
-  }
-
-  FaceTecSDK.startLiveness(sessionToken);
-}
-
-
   render() {
+    const {initializationStatus, isProcessing} = this.state;
+    const isButtonDisabled = initializationStatus !== 'success' || isProcessing;
+
     return (
-      <SafeAreaView style={[backgroundStyle, {paddingHorizontal: 10}]}>
+      <SafeAreaView style={[backgroundStyle, styles.container]}>
         <StatusBar
           barStyle={isDarkMode ? 'light-content' : 'dark-content'}
           backgroundColor={backgroundStyle.backgroundColor}
         />
-        <Text style={styles.header}>FaceTecSDK Sample</Text>
+        <Text style={styles.header}>Verificación de Identidad</Text>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={backgroundStyle}>
-          <View style={{height: 40}} />
-          <View style={{padding: 10}}>
+          style={backgroundStyle}
+          contentContainerStyle={styles.scrollContent}>
+          {this.renderInitializationStatus()}
+          <View style={styles.buttonContainer}>
             <Button
-              color="#417FB2"
-              title="Start Liveness"
-              onPress={() => this.startLivenessDetection()}
-              disabled={!this.state.isLivenessEnabled}
+              title={isProcessing ? 'Procesando...' : 'Iniciar Verificación'}
+              onPress={this.startLivenessDetection}
+              disabled={isButtonDisabled}
+              color={Colors.primary}
             />
           </View>
-          <Text
-            style={{
-              textAlign: 'center',
-              opacity: this.state.showFaceTecInitializing ? 100 : 0,
-            }}>
-            Initializing FaceTec SDK...
-          </Text>
+          {this.renderOperationResult()}
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoText}>
+              Esta aplicación utiliza FaceTec SDK para la verificación de identidad
+            </Text>
+          </View>
         </ScrollView>
       </SafeAreaView>
     );
@@ -213,29 +225,59 @@ async startLivenessDetection() {
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    paddingHorizontal: 16
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: 'center'
   },
   header: {
-    backgroundColor: '#417FB2',
-    fontSize: 25,
-    padding: 10,
-    marginTop: 15,
+    backgroundColor: Colors.primary,
+    fontSize: 22,
+    padding: 16,
+    marginTop: 16,
     color: 'white',
+    textAlign: 'center',
+    borderRadius: 8,
+    overflow: 'hidden'
   },
+  buttonContainer: {
+    padding: 16,
+    marginVertical: 8
+  },
+  statusContainer: {
+    alignItems: 'center',
+    padding: 16,
+    marginVertical: 16
+  },
+  statusText: {
+    marginTop: 16,
+    fontSize: 16,
+    textAlign: 'center'
+  },
+  resultContainer: {
+    padding: 16,
+    marginVertical: 16,
+    borderRadius: 8
+  },
+  resultText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 16
+  },
+  infoContainer: {
+    marginTop: 32,
+    padding: 16,
+    backgroundColor: '#f8f9fa',
+    borderRadius: 8
+  },
+  infoText: {
+    fontSize: 14,
+    color: '#6c757d',
+    textAlign: 'center'
+  }
 });
 
 export default App;
