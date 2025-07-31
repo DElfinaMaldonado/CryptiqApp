@@ -107,8 +107,15 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    implementation(name: 'facetec-sdk-9.7.78', ext: 'aar')
     implementation("com.facebook.react:react-android")
 
     if (hermesEnabled.toBoolean()) {
